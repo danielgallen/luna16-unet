@@ -16,7 +16,7 @@ from PIL import Image
 #import scipy.misc
 import imageio
 
-project_name = 'temporal-bone'
+project_name = 'temporal-bone-2'
 
 img_dir = os.path.join(project_name, "test")
 label_dir = os.path.join(project_name, "test_masks")
