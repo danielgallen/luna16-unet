@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/tubbytoad/Documents/ITK/Normalize/build",
+  "command": "/usr/bin/c++  -DITK_IO_FACTORY_REGISTER_MANAGER -I/home/tubbytoad/Documents/ITK/Normalize/build/ITKFactoryRegistration -I/usr/include/gdcm-2.8 -isystem /usr/include/ITK-4.13      -o CMakeFiles/Normalize.dir/normalize.cxx.o -c /home/tubbytoad/Documents/ITK/Normalize/normalize.cxx",
+  "file": "/home/tubbytoad/Documents/ITK/Normalize/normalize.cxx"
+}
+]
