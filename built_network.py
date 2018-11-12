@@ -3,8 +3,9 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.contrib.keras import layers
 from tensorflow.contrib.keras import models
-from tensorflow.python.keras import losses
+from tensorflow.contrib.keras import losses
 import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
 
 def conv_block(input_tensor, num_filters):
     encoder = layers.Conv2D(num_filters, (3, 3), padding='same')(input_tensor)
@@ -74,45 +75,57 @@ directoryOfFiles = "C:/Users/steff/Desktop/LunaProject/data-cropped/"
 input, labels = import_data(directoryOfFiles)
 
 # split data in training and validation
-train_ds =
-val_ds =
+print("Prepare data for training")
+input = np.swapaxes(input, 0, 2)
+labels = np.swapaxes(labels, 0, 2)
+x_train, x_val, y_train, y_val = train_test_split(input, labels, test_size=0.1)
+x_train = np.swapaxes(x_train, 0, 2)
+x_val = np.swapaxes(x_val, 0, 2)
+y_train = np.swapaxes(y_train, 0, 2)
+y_val = np.swapaxes(y_val, 0, 2)
 
+train_ds = tf.data.Dataset.from_tensor_slices((x_train, y_train))
+val_ds = tf.data.Dataset.from_tensor_slices((x_val, y_val))
+print(train_ds.shape, val_ds.shape)
 
-# create the model
-img_shape = (512, 512, 1)
-num_train_examples = train_ds.shape[2]
-num_val_examples = val_ds.shape[2]
-batch_size = 10
-epochs = 700
-
-model = create_model(img_shape)
-model.compile(optimizer='adam', loss=bce_dice_loss, metrics=[dice_loss])
-
-history = model.fit(train_ds,
-                   steps_per_epoch=int(np.ceil(num_train_examples / float(batch_size))),
-                   epochs=epochs,
-                   validation_data=val_ds,
-                   validation_steps=int(np.ceil(num_val_examples / float(batch_size))),)
-
-dice = history.history['dice_loss']
-val_dice = history.history['val_dice_loss']
-
-loss = history.history['loss']
-val_loss = history.history['val_loss']
-
-epochs_range = range(epochs)
-
-plt.figure(figsize=(16, 8))
-plt.subplot(1, 2, 1)
-plt.plot(epochs_range, dice, label='Training Dice Loss')
-plt.plot(epochs_range, val_dice, label='Validation Dice Loss')
-plt.legend(loc='upper right')
-plt.title('Training and Validation Dice Loss')
-
-plt.subplot(1, 2, 2)
-plt.plot(epochs_range, loss, label='Training Loss')
-plt.plot(epochs_range, val_loss, label='Validation Loss')
-plt.legend(loc='upper right')
-plt.title('Training and Validation Loss')
-
-plt.show()
+# # create the model
+# print("Creating the model")
+# img_shape = (512, 512, 1)
+# num_train_examples = train_ds.shape[2]
+# num_val_examples = val_ds.shape[2]
+# batch_size = 10
+# epochs = 700
+#
+# model = create_model(img_shape)
+# model.compile(optimizer='adam', loss=bce_dice_loss, metrics=[dice_loss])
+#
+# # Train the model
+# print("Start training")
+# history = model.fit(train_ds,
+#                    steps_per_epoch=int(np.ceil(num_train_examples / float(batch_size))),
+#                    epochs=epochs,
+#                    validation_data=val_ds,
+#                    validation_steps=int(np.ceil(num_val_examples / float(batch_size))),)
+#
+# dice = history.history['dice_loss']
+# val_dice = history.history['val_dice_loss']
+#
+# loss = history.history['loss']
+# val_loss = history.history['val_loss']
+#
+# epochs_range = range(epochs)
+#
+# plt.figure(figsize=(16, 8))
+# plt.subplot(1, 2, 1)
+# plt.plot(epochs_range, dice, label='Training Dice Loss')
+# plt.plot(epochs_range, val_dice, label='Validation Dice Loss')
+# plt.legend(loc='upper right')
+# plt.title('Training and Validation Dice Loss')
+#
+# plt.subplot(1, 2, 2)
+# plt.plot(epochs_range, loss, label='Training Loss')
+# plt.plot(epochs_range, val_loss, label='Validation Loss')
+# plt.legend(loc='upper right')
+# plt.title('Training and Validation Loss')
+#
+# plt.show()
