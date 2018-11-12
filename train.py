@@ -18,7 +18,7 @@ from tensorflow.python.keras import losses
 from tensorflow.python.keras import models
 from tensorflow.python.keras import backend as K
 
-project_name = 'temporal-bone'
+project_name = 'luna-16' 
 
 img_dir = os.path.join(project_name, "train")
 label_dir = os.path.join(project_name, "train_masks")
