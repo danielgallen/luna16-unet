@@ -2,3 +2,6 @@ Convert from mhd/raw -> nii.gz
 Normalize using ITK code (mean = 0.00, Variance = 1.00)
 Input images and labels -> 2 matching numpy arrays
 Take one slice at a time from both arrays into network
+Image augmentation (shift, rotate, scale, etc)
+Train unet
+Save output
