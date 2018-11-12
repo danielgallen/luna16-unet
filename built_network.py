@@ -73,59 +73,62 @@ def bce_dice_loss(y_true, y_pred):
 # get data
 directoryOfFiles = "C:/Users/steff/Desktop/LunaProject/data-cropped/"
 input, labels = import_data(directoryOfFiles)
+input = np.reshape(input, [input.shape[0], input.shape[1], 1, input.shape[2]])
+labels = np.reshape(labels, [labels.shape[0], labels.shape[1], 1, labels.shape[2]])
 
 # split data in training and validation
 print("Prepare data for training")
-input = np.swapaxes(input, 0, 2)
-labels = np.swapaxes(labels, 0, 2)
+input = np.swapaxes(input, 0, 3)
+labels = np.swapaxes(labels, 0, 3)
 x_train, x_val, y_train, y_val = train_test_split(input, labels, test_size=0.1)
-x_train = np.swapaxes(x_train, 0, 2)
-x_val = np.swapaxes(x_val, 0, 2)
-y_train = np.swapaxes(y_train, 0, 2)
-y_val = np.swapaxes(y_val, 0, 2)
+x_train = np.swapaxes(x_train, 0, 3)
+x_val = np.swapaxes(x_val, 0, 3)
+y_train = np.swapaxes(y_train, 0, 3)
+y_val = np.swapaxes(y_val, 0, 3)
 
-train_ds = tf.data.Dataset.from_tensor_slices((x_train, y_train))
-val_ds = tf.data.Dataset.from_tensor_slices((x_val, y_val))
-print(train_ds.shape, val_ds.shape)
+train_ds = tf.contrib.data.Dataset.from_tensor_slices((x_train, y_train))
+val_ds = tf.contrib.data.Dataset.from_tensor_slices((x_val, y_val))
 
-# # create the model
-# print("Creating the model")
-# img_shape = (512, 512, 1)
-# num_train_examples = train_ds.shape[2]
-# num_val_examples = val_ds.shape[2]
-# batch_size = 10
-# epochs = 700
-#
-# model = create_model(img_shape)
-# model.compile(optimizer='adam', loss=bce_dice_loss, metrics=[dice_loss])
-#
-# # Train the model
-# print("Start training")
-# history = model.fit(train_ds,
-#                    steps_per_epoch=int(np.ceil(num_train_examples / float(batch_size))),
-#                    epochs=epochs,
-#                    validation_data=val_ds,
-#                    validation_steps=int(np.ceil(num_val_examples / float(batch_size))),)
-#
-# dice = history.history['dice_loss']
-# val_dice = history.history['val_dice_loss']
-#
-# loss = history.history['loss']
-# val_loss = history.history['val_loss']
-#
-# epochs_range = range(epochs)
-#
-# plt.figure(figsize=(16, 8))
-# plt.subplot(1, 2, 1)
-# plt.plot(epochs_range, dice, label='Training Dice Loss')
-# plt.plot(epochs_range, val_dice, label='Validation Dice Loss')
-# plt.legend(loc='upper right')
-# plt.title('Training and Validation Dice Loss')
-#
-# plt.subplot(1, 2, 2)
-# plt.plot(epochs_range, loss, label='Training Loss')
-# plt.plot(epochs_range, val_loss, label='Validation Loss')
-# plt.legend(loc='upper right')
-# plt.title('Training and Validation Loss')
-#
-# plt.show()
+# create the model
+print("Creating the model")
+img_shape = (512, 512, 1)
+num_train_examples = x_train.shape[3]
+num_val_examples = x_val.shape[3]
+batch_size = 10
+epochs = 700
+
+model = create_model(img_shape)
+
+# Train the model
+print("Start training")
+save_model_path = "../temp/weights.hdf5"
+model.compile(optimizer='adam', loss=bce_dice_loss, metrics=[dice_loss])
+model.summary()
+cp = tf.contrib.keras.callbacks.ModelCheckpoint(filepath=save_model_path, monitor='val_dice_loss', save_best_only=True, verbose=1)
+
+history = model.fit(x_train, y_train,
+                   epochs=epochs,
+                   callbacks=[cp])
+
+dice = history.history['dice_loss']
+val_dice = history.history['val_dice_loss']
+
+loss = history.history['loss']
+val_loss = history.history['val_loss']
+
+epochs_range = range(epochs)
+
+plt.figure(figsize=(16, 8))
+plt.subplot(1, 2, 1)
+plt.plot(epochs_range, dice, label='Training Dice Loss')
+plt.plot(epochs_range, val_dice, label='Validation Dice Loss')
+plt.legend(loc='upper right')
+plt.title('Training and Validation Dice Loss')
+
+plt.subplot(1, 2, 2)
+plt.plot(epochs_range, loss, label='Training Loss')
+plt.plot(epochs_range, val_loss, label='Validation Loss')
+plt.legend(loc='upper right')
+plt.title('Training and Validation Loss')
+
+plt.show()
