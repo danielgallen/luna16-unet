@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split
 directoryOfFiles = "./data/train/"
 img_shape = (512, 512, 1)
 #batch_size = 2
-epochs = 20
+epochs = 10 
 
 # functions for creating a unet model
 def conv_block(input_tensor, num_filters):
@@ -81,10 +81,14 @@ def bce_dice_loss(y_true, y_pred):
     return loss
 
 def generator(features, labels):
-    batch_size=1
+    batch_size=3
     batch_features = np.zeros((batch_size, 512, 512, 1))
     batch_labels = np.zeros((batch_size, 512, 512, 1))
-    while True: 
+    while True:
+        for i in range(batch_size):
+            #index = random.choice(len(features),1)
+            batch_features[i] = features[i]
+            batch_labels[i] = labels[i]
         yield batch_features, batch_labels
 
 # get data
@@ -112,11 +116,11 @@ model = create_model(img_shape)
 # Train the model
 print("Start training")
 #save_model_path = "../temp/weights.hdf5"
-model.compile(optimizer='adam', loss=bce_dice_loss, metrics=[dice_loss])
+model.compile(optimizer='adam', loss=dice_loss, metrics=[dice_loss])
 model.summary()
 #cp = tf.contrib.keras.callbacks.ModelCheckpoint(filepath=save_model_path, monitor='val_dice_loss', save_best_only=True, verbose=1)
 
-history = model.fit_generator(generator(x_train, y_train), epochs=epochs, steps_per_epoch=2)
+history = model.fit_generator(generator(x_train, y_train), epochs=epochs, steps_per_epoch=20)
 
 dice = history.history['dice_loss']
 #val_dice = history.history['val_dice_loss']
