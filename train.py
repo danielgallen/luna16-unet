@@ -9,7 +9,7 @@ mpl.rcParams['figure.figsize'] = (12,12)
 from sklearn.model_selection import train_test_split
 import matplotlib.image as mpimg
 import pandas as pd
-from PIL import Image
+#from PIL import Image
 
 import tensorflow as tf
 import tensorflow.contrib as tfcontrib
@@ -18,7 +18,7 @@ from tensorflow.python.keras import losses
 from tensorflow.python.keras import models
 from tensorflow.python.keras import backend as K
 
-project_name = 'luna-16' 
+project_name = 'luna16-unet'
 
 img_dir = os.path.join(project_name, "train")
 label_dir = os.path.join(project_name, "train_masks")
@@ -252,10 +252,8 @@ model.summary()
 cp = tf.keras.callbacks.ModelCheckpoint(filepath=save_model_path, monitor='val_dice_loss', save_best_only=True, verbose=1)
 tensorboard = tf.keras.callbacks.TensorBoard(log_dir='./logs', histogram_freq=0, batch_size=32, write_graph=True, write_grads=False, write_images=True)
 history = model.fit(train_ds, 
-                   steps_per_epoch=int(np.ceil(num_train_examples / float(batch_size))),
                    epochs=epochs,
                    validation_data=val_ds,
-                   validation_steps=int(np.ceil(num_val_examples / float(batch_size))),
                    callbacks=[cp, tensorboard])
 
 dice = history.history['dice_loss']

@@ -16,7 +16,7 @@ def import_data(data_directory):
     print("Start importing data, Progress:")
     counter = 0
     for filename in files:
-        directory = data_directory + filename
+        directory = data_directory + "/" + filename
         if directory.find("normalized") >= 0:
             current_file = nib.load(directory).get_fdata()
             input_matrix = np.concatenate((input_matrix, current_file), axis=2)

@@ -12,7 +12,7 @@ import tensorflow.contrib as tfcontrib
 from tensorflow.python.keras import losses
 from tensorflow.python.keras import models
 from tensorflow.python.keras import backend as K
-from PIL import Image
+#from PIL import Image
 #import scipy.misc
 import imageio
 
