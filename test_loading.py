@@ -116,7 +116,7 @@ model.compile(optimizer='adam', loss=bce_dice_loss, metrics=[dice_loss])
 model.summary()
 #cp = tf.contrib.keras.callbacks.ModelCheckpoint(filepath=save_model_path, monitor='val_dice_loss', save_best_only=True, verbose=1)
 
-history = model.fit_generator(generator(x_train, y_train), epochs=220, steps_per_epoch=2)
+history = model.fit_generator(generator(x_train, y_train), epochs=epochs, steps_per_epoch=2)
 
 dice = history.history['dice_loss']
 #val_dice = history.history['val_dice_loss']
