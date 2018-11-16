@@ -7,6 +7,13 @@ from tensorflow.contrib.keras import losses
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 
+# global variables
+directoryOfFiles = "C:/Users/steff/Desktop/LunaProject/data-cropped/"
+img_shape = (512, 512, 1)
+batch_size = 2
+epochs = 2
+
+# functions for creating a unet model
 def conv_block(input_tensor, num_filters):
     encoder = layers.Conv2D(num_filters, (3, 3), padding='same')(input_tensor)
     encoder = layers.BatchNormalization()(encoder)
@@ -36,6 +43,7 @@ def decoder_block(input_tensor, concat_tensor, num_filters):
     decoder = layers.Activation('relu')(decoder)
     return decoder
 
+# create the unet
 def create_model(img_shape):
     inputs = layers.Input(shape=img_shape)
     encoder0_pool, encoder0 = encoder_block(inputs, 32)
@@ -53,6 +61,7 @@ def create_model(img_shape):
     model = models.Model(inputs=[inputs], outputs=[outputs])
     return model
 
+# define loss function
 def dice_coeff(y_true, y_pred):
     smooth = 1.
     # Flatten
@@ -71,31 +80,27 @@ def bce_dice_loss(y_true, y_pred):
     return loss
 
 # get data
-directoryOfFiles = "C:/Users/steff/Desktop/LunaProject/data-cropped/"
 input, labels = import_data(directoryOfFiles)
 input = np.reshape(input, [input.shape[0], input.shape[1], 1, input.shape[2]])
 labels = np.reshape(labels, [labels.shape[0], labels.shape[1], 1, labels.shape[2]])
 
 # split data in training and validation
 print("Prepare data for training")
-input = np.swapaxes(input, 0, 3)
-labels = np.swapaxes(labels, 0, 3)
+input = np.moveaxis(input, -1, 0)
+labels = np.moveaxis(labels, -1, 0)
 x_train, x_val, y_train, y_val = train_test_split(input, labels, test_size=0.1)
-x_train = np.swapaxes(x_train, 0, 3)
-x_val = np.swapaxes(x_val, 0, 3)
-y_train = np.swapaxes(y_train, 0, 3)
-y_val = np.swapaxes(y_val, 0, 3)
+# x_train = np.swapaxes(x_train, 0, 3)
+# x_val = np.swapaxes(x_val, 0, 3)
+# y_train = np.swapaxes(y_train, 0, 3)
+# y_val = np.swapaxes(y_val, 0, 3)
 
 train_ds = tf.contrib.data.Dataset.from_tensor_slices((x_train, y_train))
 val_ds = tf.contrib.data.Dataset.from_tensor_slices((x_val, y_val))
 
 # create the model
 print("Creating the model")
-img_shape = (512, 512, 1)
-num_train_examples = x_train.shape[3]
-num_val_examples = x_val.shape[3]
-batch_size = 10
-epochs = 700
+num_train_examples = x_train.shape[0]
+num_val_examples = x_val.shape[0]
 
 model = create_model(img_shape)
 
