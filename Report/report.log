@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  16 NOV 2018 15:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  16 NOV 2018 15:27
 entering extended mode
 **./report.tex
 (report.tex
@@ -236,7 +236,8 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-) (doc/Part1.tex) (report.bbl)
+) (doc/introduction.tex) (doc/background.tex) (doc/relatedwork.tex)
+(doc/process.tex) (doc/evaluation.tex) (doc/conclusion.tex) (report.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -255,9 +256,9 @@ Before submitting the final camera ready copy, remember to:
 ]
 (report.aux) ) 
 Here is how much of TeX's memory you used:
- 2258 strings out of 492973
- 38481 string characters out of 3126692
- 102641 words of memory out of 3000000
+ 2273 strings out of 492973
+ 38996 string characters out of 3126692
+ 103641 words of memory out of 3000000
  6129 multiletter control sequences out of 15000+200000
  31871 words of font info for 61 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -267,7 +268,7 @@ Here is how much of TeX's memory you used:
 times/utmb8a.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
 urw/times/utmbi8a.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/t
 ype1/urw/times/utmr8a.pfb>
-Output written on report.pdf (1 page, 30271 bytes).
+Output written on report.pdf (1 page, 30956 bytes).
 PDF statistics:
  19 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
