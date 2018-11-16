@@ -8,7 +8,8 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 
 # global variables
-directoryOfFiles = "C:/Users/steff/Desktop/LunaProject/data-cropped/"
+# Change to relative path
+directoryOfFiles = "./data/train/"
 img_shape = (512, 512, 1)
 batch_size = 2
 epochs = 2
