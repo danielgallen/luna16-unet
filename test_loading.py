@@ -129,3 +129,18 @@ loss = history.history['loss']
 #val_loss = history.history['val_loss']
 
 epochs_range = range(epochs)
+
+plt.figure(figsize=(16, 8))
+plt.subplot(1, 2, 1)
+plt.plot(epochs_range, dice, label='Training Dice Loss')
+#plt.plot(epochs_range, val_dice, label='Validation Dice Loss')
+plt.legend(loc='upper right')
+plt.title('Training and Validation Dice Loss')
+
+plt.subplot(1, 2, 2)
+plt.plot(epochs_range, loss, label='Training Loss')
+#plt.plot(epochs_range, val_loss, label='Validation Loss')
+plt.legend(loc='upper right')
+plt.title('Training and Validation Loss')
+
+plt.show()
