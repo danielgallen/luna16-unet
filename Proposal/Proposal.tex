@@ -1,0 +1,48 @@
+\documentclass[conference]{IEEEtran}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+
+\title{Segmentation of lung structures in the LUNA16 dataset}
+
+\author{
+	\IEEEauthorblockN{Lionel Rajaona}
+	\IEEEauthorblockA{
+		University of Western Ontario\\
+		Email: lrajaona@uwo.ca}
+	\and
+	\IEEEauthorblockN{Rajat Balhotra}
+	\IEEEauthorblockA{
+		University of Western Ontario\\
+		Email: rbalhotr@uwo.ca}
+	\and
+	\IEEEauthorblockN{Daniel Allen}
+	\IEEEauthorblockA{
+		University of Western Ontario\\
+		Email: dallen44@uwo.ca}
+	\and
+	\IEEEauthorblockN{Steffen Bleher}
+	\IEEEauthorblockA{University of Western Ontario\\
+		Email: sbleher@uwo.ca}
+	}
+
+
+
+\maketitle
+
+\begin{abstract}
+	The LUng Nodule Analysis 2016 (LUNA16) is a open challenge for using algorithms to support radiologist in treating lung cancer patients. The dataset is available on \textit{luna16.grand-challenge.org}. We want to use this dataset to segment structures of the lungs.
+\end{abstract}
+
+\section{Description of the dataset}
+The LUNA16 dataset is a collection of clinical computed-tomography (CT) scans of the lung. Each collection consists of a set of 512x512 pixel images with varying numbers of slices of the lung. The volumes are spaced at 0.742x0.742x2.500mm. Furthermore, these sets are linked to evaluations of four different radiologists. They marked nodules in the lungs which imply lung cancer. The idea of the challenge is to detect the infected nodules.
+
+\section{Objective of the project}
+Our goal is to use the LUNA16 dataset to segment the lung from the CT images. We want to mark the lung in every CT image to get a 3-dimensional structure of the lung. Therefore we are going to apply separation algorithms (like u-nets, v-nets, etc.) to the CT images. That will give us the edges of the lung and will allow us to model the shape of it.\newline
+We will accomplish that by find a working separation algorithm and by optimizing it for the dataset of CT lung scans. 
+
+\end{document}
+
+
