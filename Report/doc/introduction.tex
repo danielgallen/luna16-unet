@@ -1,3 +1,19 @@
 % !TEX root = ../Report.tex
 
-The dataset is from the LUNA challenge \cite{luna}.
+Since hardware specifications and computational power increased dramatically in the last years machine learning can be realized in various disciplines today. On top of that the progress in research on convolutional neuronal networks (CNN) made it a very powerful tool for image processing where information is gained from image data.\newline
+One challenging application is medical image computing (MIC). The main goal of MIC is to extract clinically relevant information or knowledge from medical images. Furthermore Segmentation is the process of partitioning an image into different meaningful segments (e. g. organs, bones, ...).\newline
+In this project the goal is to segment the lung of a human body from a computed tomography (CT) scans.\newline
+The used dataset is from the LUNA16 challenge \cite{luna} and each scan contains a number of slices which are 512 x 512 pixel greyscale images.
+
+- decide for each pixel if it is part of the lung
+
+importance
+- is the first step for further image processing, e. g. nodules (luna challenge)
+ --> outperform and reduce errors, reduce cost
+ 
+overview
+- we use different networks to segment the lung from the ct images
+- implemented, under metrics examined and displayed
+
+organization
+- structure
