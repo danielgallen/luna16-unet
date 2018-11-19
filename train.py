@@ -118,13 +118,13 @@ model = create_model(img_shape)
 
 # Train the model
 print("Start training")
-save_model_path = "../temp/weights.hdf5"
+save_model_path = "temp/weights.hdf5"
 model.compile(optimizer='adam', loss=dice_loss, metrics=[dice_loss])
 model.summary()
 cp = tf.contrib.keras.callbacks.ModelCheckpoint(filepath=save_model_path, monitor='dice_loss', save_best_only=True,
                                                 verbose=1)
 
-history = model.fit_generator(generator(x_train, y_train), epochs=epochs, steps_per_epoch=20, callback=[cp])
+history = model.fit_generator(generator(x_train, y_train), epochs=epochs, steps_per_epoch=20, callbacks=[cp])
 
 dice = history.history['dice_loss']
 # val_dice = history.history['val_dice_loss']
