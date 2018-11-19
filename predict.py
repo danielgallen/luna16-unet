@@ -35,6 +35,8 @@ def bce_dice_loss(y_true, y_pred):
     loss = losses.binary_crossentropy(y_true, y_pred) + dice_loss(y_true, y_pred)
     return loss
 
+
+
 # get data
 input, _ = import_data(directoryOfFiles)
 input = np.reshape(input, [input.shape[0], input.shape[1], 1, input.shape[2]])
@@ -50,10 +52,13 @@ model = models.load_model(save_model_path, custom_objects={'bce_dice_loss': bce_
 print("Predict")
 predict = model.predict(input)
 predict = np.moveaxis(predict, 0, -1)
+predict = np.squeeze(predict)
+print(np.amax(predict))
 print(predict.shape)
 
 # export it to a .nii.gz
 print("Export to file")
-img = nib.Nifti2Image(predict, None)  # np.eye(3)
-filename = directoryToSave + "/prediction.nii.gz"
+img = nib.Nifti1Image(predict, affine=np.eye(4))  # np.eye(3)
+print(img.shape)
+filename = directoryToSave + "/prediction-label.nii.gz"
 nib.save(img, filename)
