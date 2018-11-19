@@ -119,7 +119,7 @@ model = create_model(img_shape)
 # Train the model
 print("Start training")
 save_model_path = "temp/weights.hdf5"
-model.compile(optimizer='adam', loss=dice_loss, metrics=[dice_loss])
+model.compile(optimizer='adam', loss=bce_dice_loss, metrics=[dice_loss])
 model.summary()
 cp = tf.contrib.keras.callbacks.ModelCheckpoint(filepath=save_model_path, monitor='dice_loss', save_best_only=True,
                                                 verbose=1)
@@ -133,7 +133,8 @@ loss = history.history['loss']
 # val_loss = history.history['val_loss']
 
 epochs_range = range(epochs)
-
+model.save("temp/finalweights.h5")
+model.save_model("temp/otherweights.h5")
 plt.figure(figsize=(16, 8))
 plt.subplot(1, 2, 1)
 plt.plot(epochs_range, dice, label='Training Dice Loss')
