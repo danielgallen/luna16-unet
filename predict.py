@@ -4,7 +4,7 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.contrib.keras import models
 from tensorflow.contrib.keras import losses
-
+from tensorflow.contrib.keras import layers
 
 # ---------------------------
 # prediciting the label for one image and export it to a nii.gz file
@@ -43,8 +43,8 @@ input = np.moveaxis(input, -1, 0)
 
 # load trained model
 print("Loading model")
-save_model_path = './tmp/weights/newweights.h5'
-model = models.load_model(save_model_path)
+save_model_path = './temp/newweights.h5'
+model = models.load_model(save_model_path, custom_objects={'bce_dice_loss': bce_dice_loss, 'dice_loss': dice_loss})
 
 # predict label for one image
 print("Predict")
