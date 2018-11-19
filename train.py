@@ -131,7 +131,7 @@ dice = history.history['dice_loss']
 
 loss = history.history['loss']
 # val_loss = history.history['val_loss']
-
+model.save("temp/finalweights.h5")
 epochs_range = range(epochs)
 model.save("temp/newweights.h5")
 plt.figure(figsize=(16, 8))
