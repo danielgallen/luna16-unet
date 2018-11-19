@@ -133,7 +133,8 @@ loss = history.history['loss']
 # val_loss = history.history['val_loss']
 model.save("temp/finalweights.h5")
 epochs_range = range(epochs)
-
+model.save("temp/finalweights.h5")
+model.save_model("temp/otherweights.h5")
 plt.figure(figsize=(16, 8))
 plt.subplot(1, 2, 1)
 plt.plot(epochs_range, dice, label='Training Dice Loss')
