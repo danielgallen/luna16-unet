@@ -131,9 +131,9 @@ dice = history.history['dice_loss']
 
 loss = history.history['loss']
 # val_loss = history.history['val_loss']
-model.save("temp/finalweights.h5", include_optimizer=False)
+model.save("temp/finalweights.h5")
+models.save_model(model, "temp/modelSteffen.hdf5")
 epochs_range = range(epochs)
-model.save("temp/newweights.h5")
 plt.figure(figsize=(16, 8))
 plt.subplot(1, 2, 1)
 plt.plot(epochs_range, dice, label='Training Dice Loss')

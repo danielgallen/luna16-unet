@@ -46,6 +46,7 @@ input = np.moveaxis(input, -1, 0)
 # load trained model
 print("Loading model")
 save_model_path = './temp/newweights.h5'
+save_model_path = "./temp/modelSteffen.hdf5"
 model = models.load_model(save_model_path, custom_objects={'bce_dice_loss': bce_dice_loss, 'dice_loss': dice_loss})
 
 # predict label for one image
