@@ -133,6 +133,7 @@ loss = history.history['loss']
 # val_loss = history.history['val_loss']
 model.save("temp/finalweights.h5")
 models.save_model(model, "temp/modelSteffen.hdf5")
+models.save_model(model, "temp/modelSteffen2.hdf5", include_optimizer=False)
 epochs_range = range(epochs)
 plt.figure(figsize=(16, 8))
 plt.subplot(1, 2, 1)
