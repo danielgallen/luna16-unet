@@ -11,8 +11,8 @@ from sklearn.model_selection import train_test_split
 # Change to relative path
 directoryOfFiles = "./data/train/"
 img_shape = (512, 512, 1)
-# batch_size = 2
 epochs = 10
+steps_per_epoch = 20
 
 
 # functions for creating a unet model
@@ -107,6 +107,8 @@ labels = np.reshape(labels, [labels.shape[0], labels.shape[1], 1, labels.shape[2
 print("Prepare data for training")
 input = np.moveaxis(input, -1, 0)
 labels = np.moveaxis(labels, -1, 0)
+# input = input[:10,:,:,:]
+# labels = labels[:10,:,:,:]
 x_train, x_val, y_train, y_val = train_test_split(input, labels, test_size=0.1)
 
 # create the model
@@ -124,7 +126,7 @@ model.summary()
 cp = tf.contrib.keras.callbacks.ModelCheckpoint(filepath=save_model_path, monitor='dice_loss', save_best_only=True,
                                                 verbose=1)
 
-history = model.fit_generator(generator(x_train, y_train), epochs=epochs, steps_per_epoch=20, callbacks=[cp])
+history = model.fit_generator(generator(x_train, y_train), epochs=epochs, steps_per_epoch=steps_per_epoch, callbacks=[cp])
 
 dice = history.history['dice_loss']
 # val_dice = history.history['val_dice_loss']
@@ -132,8 +134,7 @@ dice = history.history['dice_loss']
 loss = history.history['loss']
 # val_loss = history.history['val_loss']
 model.save("temp/finalweights.h5")
-models.save_model(model, "temp/modelSteffen.hdf5")
-models.save_model(model, "temp/modelSteffen2.hdf5", include_optimizer=False)
+models.save_model(model, "temp/finalweights2.hdf5")
 epochs_range = range(epochs)
 plt.figure(figsize=(16, 8))
 plt.subplot(1, 2, 1)
