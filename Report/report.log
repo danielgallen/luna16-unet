@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  21 NOV 2018 22:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  22 NOV 2018 12:56
 entering extended mode
 **./report.tex
 (report.tex
@@ -248,19 +248,41 @@ Overfull \hbox (0.84283pt too wide) in paragraph at lines 9--10
  []
 
 ) (doc/background.tex
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
+<files/deepmedic.png, id=2, 1018.80624pt x 326.21875pt>
+File: files/deepmedic.png Graphic file (type png)
+<use files/deepmedic.png>
+Package pdftex.def Info: files/deepmedic.png  used on input line 8.
+(pdftex.def)             Requested size: 252.84283pt x 80.95715pt.
 
- []
-
-<files/unetstructure.jpg, id=2, 704.6325pt x 481.8pt>
-File: files/unetstructure.jpg Graphic file (type jpg)
-<use files/unetstructure.jpg>
-Package pdftex.def Info: files/unetstructure.jpg  used on input line 19.
-(pdftex.def)             Requested size: 252.84283pt x 172.88177pt.
-
-Overfull \hbox (0.84283pt too wide) in paragraph at lines 19--20
+Overfull \hbox (0.84283pt too wide) in paragraph at lines 8--9
 [][] 
  []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 4205) in paragraph at lines 14--15
+[]\OT1/ptm/m/n/10 Semantic seg-men-ta-tion is par-ti-tion of an im-age in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+
+ []
+
+<files/unetstructure.jpg, id=3, 704.6325pt x 481.8pt>
+File: files/unetstructure.jpg Graphic file (type jpg)
+<use files/unetstructure.jpg>
+Package pdftex.def Info: files/unetstructure.jpg  used on input line 17.
+(pdftex.def)             Requested size: 252.84283pt x 172.88177pt.
+
+Overfull \hbox (0.84283pt too wide) in paragraph at lines 17--18
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [1{C:/Users/steff/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
@@ -278,24 +300,25 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2 <./files/unetstructure.jpg>] (report.aux) ) 
+[2 <./files/deepmedic.png> <./files/unetstructure.jpg>] (report.aux) ) 
 Here is how much of TeX's memory you used:
- 2288 strings out of 492973
- 39293 string characters out of 3126692
- 107657 words of memory out of 3000000
- 6139 multiletter control sequences out of 15000+200000
+ 2295 strings out of 492973
+ 39416 string characters out of 3126692
+ 111665 words of memory out of 3000000
+ 6144 multiletter control sequences out of 15000+200000
  33007 words of font info for 62 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 41i,7n,25p,1703b,234s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/steff/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/steff/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/steff/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/steff/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/steff/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (2 pages, 148356 bytes).
+ 41i,7n,25p,881b,234s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users
+/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/
+steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Us
+ers/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><
+C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.p
+fb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr
+i8a.pfb>
+Output written on report.pdf (2 pages, 484065 bytes).
 PDF statistics:
- 28 PDF objects out of 1000 (max. 8388607)
+ 29 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
