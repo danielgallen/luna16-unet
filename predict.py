@@ -42,10 +42,11 @@ input, _ = import_data(directoryOfFiles)
 input = np.reshape(input, [input.shape[0], input.shape[1], 1, input.shape[2]])
 print(input.shape)
 input = np.moveaxis(input, -1, 0)
+input = input[:2,:,:,:]
 
 # load trained model
 print("Loading model")
-save_model_path = './temp/newweights.h5'
+save_model_path = './temp/finalweights2.hdf5'
 model = models.load_model(save_model_path, custom_objects={'bce_dice_loss': bce_dice_loss, 'dice_loss': dice_loss})
 
 # predict label for one image

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  19 NOV 2018 12:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  21 NOV 2018 22:33
 entering extended mode
 **./report.tex
 (report.tex
@@ -247,8 +247,26 @@ Overfull \hbox (0.84283pt too wide) in paragraph at lines 9--10
 [][] 
  []
 
-) (doc/background.tex) (doc/relatedwork.tex) (doc/process.tex)
-(doc/evaluation.tex) (doc/conclusion.tex) (report.bbl)
+) (doc/background.tex
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+<files/unetstructure.jpg, id=2, 704.6325pt x 481.8pt>
+File: files/unetstructure.jpg Graphic file (type jpg)
+<use files/unetstructure.jpg>
+Package pdftex.def Info: files/unetstructure.jpg  used on input line 19.
+(pdftex.def)             Requested size: 252.84283pt x 172.88177pt.
+
+Overfull \hbox (0.84283pt too wide) in paragraph at lines 19--20
+[][] 
+ []
+
+[1{C:/Users/steff/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+ <./files/scan_picture.jpg>]) (doc/relatedwork.tex) (doc/process.tex) (doc/eval
+uation.tex) (doc/conclusion.tex) (report.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -260,26 +278,24 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[1{C:/Users/steff/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-
- <./files/scan_picture.jpg>] (report.aux) ) 
+[2 <./files/unetstructure.jpg>] (report.aux) ) 
 Here is how much of TeX's memory you used:
- 2281 strings out of 492973
- 39143 string characters out of 3126692
- 106649 words of memory out of 3000000
- 6134 multiletter control sequences out of 15000+200000
- 31871 words of font info for 61 fonts, out of 3000000 for 9000
+ 2288 strings out of 492973
+ 39293 string characters out of 3126692
+ 107657 words of memory out of 3000000
+ 6139 multiletter control sequences out of 15000+200000
+ 33007 words of font info for 62 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 41i,7n,25p,605b,234s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/steff/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/steff/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/steff/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/steff/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on report.pdf (1 page, 74128 bytes).
+ 41i,7n,25p,1703b,234s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/steff/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/steff/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/steff/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/steff/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/steff/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on report.pdf (2 pages, 148356 bytes).
 PDF statistics:
- 20 PDF objects out of 1000 (max. 8388607)
+ 28 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

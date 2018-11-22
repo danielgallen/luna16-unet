@@ -2,6 +2,9 @@ import os
 import numpy as np
 import nibabel as nib
 
+# ---------------------------
+# importing data from directory to a numpy array
+# ---------------------------
 
 def import_data(data_directory):
     # imports data from directory and returns numpy arrays input and labels with size [512, 512, num_slices]
