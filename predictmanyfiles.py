@@ -13,7 +13,7 @@ from tensorflow.contrib.keras import layers
 
 # global variables
 directoryOfFiles = "./data/test/"
-directoryToSave = "./data/prediction"
+directoryToSave = "./data/test/"
 
 def dice_coeff(y_true, y_pred):
     smooth = 1.
@@ -49,37 +49,37 @@ for filename in files:
     input_matrix = np.zeros((input_shape[0], input_shape[1], 0))
 
     print("Start importing data, Progress:")
-    directory = directoryOfFiles + "/" + filename
+    directory = directoryOfFiles + filename
     if directory.find("normalized") >= 0:
         current_image = nib.load(directory).get_fdata()
         input_matrix = np.concatenate((input_matrix, current_image), axis=2)
 
-    print("Import done, Input Size:")
-    print(input_matrix.shape)
-    targetaffine = nib.load(directory).affine
+        print("Import done, Input Size:")
+        print(input_matrix.shape)
+        targetaffine = nib.load(directory).affine
 
-    # get data
-    input = input_matrix
-    input = np.reshape(input, [input.shape[0], input.shape[1], 1, input.shape[2]])
-    print(input.shape)
-    input = np.moveaxis(input, -1, 0)
-    #input = input[:2,:,:,:]
+        # get data
+        input = input_matrix
+        input = np.reshape(input, [input.shape[0], input.shape[1], 1, input.shape[2]])
+        print(input.shape)
+        input = np.moveaxis(input, -1, 0)
+        #input = input[:2,:,:,:]
 
 
-    # predict label for one image
-    print("Predict")
-    predict = model.predict(input)
-    predict = np.moveaxis(predict, 0, -1)
-    predict = np.squeeze(predict)
-    print(np.amax(predict))
-    print(predict.shape)
-    predictlabel = predict
-    predictlabel[predictlabel > 0.7] = 1
-    predictlabel[predictlabel < 0.9] = 0
+        # predict label for one image
+        print("Predict")
+        predict = model.predict(input)
+        predict = np.moveaxis(predict, 0, -1)
+        predict = np.squeeze(predict)
+        print(np.amax(predict))
+        print(predict.shape)
+        predictlabel = predict
+        predictlabel[predictlabel > 0.7] = 1
+        predictlabel[predictlabel < 0.9] = 0
 
-    # export it to a .nii.gz
-    print("Export to file")
-    img = nib.Nifti1Image(predictlabel, affine=targetaffine)
-    name = filename[:-17] + "pred-label.nii.gz"
-    nib.save(img, directoryToSave + name)
+        # export it to a .nii.gz
+        print("Export to file")
+        img = nib.Nifti1Image(predictlabel, affine=targetaffine)
+        name = filename[:-17] + "pred-label.nii.gz"
+        nib.save(img, directoryToSave + name)
 
