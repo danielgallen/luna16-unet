@@ -42,6 +42,7 @@ input, _ = import_data(directoryOfFiles)
 input = np.reshape(input, [input.shape[0], input.shape[1], 1, input.shape[2]])
 print(input.shape)
 input = np.moveaxis(input, -1, 0)
+input = input[:2,:,:,:]
 
 # load trained model
 print("Loading model")
