@@ -15,6 +15,33 @@ from tensorflow.contrib.keras import layers
 directoryOfFiles = "./data/test/"
 directoryToSave = "./data/prediction"
 
+def import_data(data_directory):
+    # imports data from directory and returns numpy arrays input and labels with size [512, 512, num_slices]
+
+    files = os.listdir(data_directory)
+    input_size = len(files)
+    input_shape = [512, 512]
+
+    input_matrix = np.zeros((input_shape[0], input_shape[1], 0))
+    labels_matrix = np.zeros((input_shape[0], input_shape[1], 0))
+
+    print("Start importing data, Progress:")
+    counter = 0
+    for filename in files:
+        directory = data_directory + "/" + filename
+        if directory.find("normalized") >= 0:
+            current_file = nib.load(directory).get_fdata()
+            input_matrix = np.concatenate((input_matrix, current_file), axis=2)
+        if directory.find("label") >= 0:
+            current_file = nib.load(directory).get_fdata()
+            labels_matrix = np.concatenate((labels_matrix, current_file), axis=2)
+        counter = counter + 1
+        print(counter / input_size)
+
+    print("Import done, Input Size:")
+    print(input_matrix.shape)
+    print(labels_matrix.shape)
+
 
 def dice_coeff(y_true, y_pred):
     smooth = 1.
@@ -42,7 +69,7 @@ input, _ = import_data(directoryOfFiles)
 input = np.reshape(input, [input.shape[0], input.shape[1], 1, input.shape[2]])
 print(input.shape)
 input = np.moveaxis(input, -1, 0)
-input = input[:2,:,:,:]
+#input = input[:2,:,:,:]
 
 # load trained model
 print("Loading model")
@@ -56,10 +83,16 @@ predict = np.moveaxis(predict, 0, -1)
 predict = np.squeeze(predict)
 print(np.amax(predict))
 print(predict.shape)
+#predictlabel = predict
+#predictlabel[predictlabel > 0.7] = 1
+#predictlabel[predictlabel < 0.9] = 0
 
 # export it to a .nii.gz
 print("Export to file")
 img = nib.Nifti1Image(predict, affine=np.eye(4))  # np.eye(3)
+#labelimg = nib.Nifti1Image(predictlabel, affine=np.eye(4))
 print(img.shape)
-filename = directoryToSave + "/prediction-label.nii.gz"
+filename = directoryToSave + "/prediction.nii.gz"
+#labelfilename = directoryToSave + "/prediction-label.nii.gz"
 nib.save(img, filename)
+#nib.save(labelimg, labelfilename)

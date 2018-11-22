@@ -87,14 +87,14 @@ def bce_dice_loss(y_true, y_pred):
 
 
 def generator(features, labels):
-    batch_size = 3
+    batch_size = 3 
     batch_features = np.zeros((batch_size, 512, 512, 1))
     batch_labels = np.zeros((batch_size, 512, 512, 1))
     while True:
         for i in range(batch_size):
-            # index = random.choice(len(features),1)
-            batch_features[i] = features[i]
-            batch_labels[i] = labels[i]
+            index = np.random.choice(len(features),1)
+            batch_features[i] = features[index]
+            batch_labels[i] = labels[index]
         yield batch_features, batch_labels
 
 
