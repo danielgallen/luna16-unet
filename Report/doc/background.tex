@@ -27,8 +27,26 @@ In comparison to other fully convolutional segmentation networks, the main featu
 \subsection{Metrics}
 
 \subsubsection{Dice Loss}
-formulas
+We need  validation criteria to build our models. We use a Dice loss coefficient to compare the similarity of two samples. In the following equation, smmooth is added and stands for backpropagation. Ours is defined by: 
+\begin{equation}
+Diceloss = 1 - \frac{2*(Y_{true} \bigcap Y_{prediction} + 1)}{|Y_{true}| + |Y_{prediction}| + 1}
+\end{equation} 
+
+
+
 \subsubsection{BCE Dice Loss}
+We also use binary cross-entropy (BCE) to measure the performance of our classification model. For labels y and predcted probabilities p, binary cros-entropy is:
+
+\begin{equation}
+BCE = - \frac{1}{n} \sum_{i=1}^{n}(y \log{(p_i)} + (1-y_i)\log{(1-p_i)})
+\end{equation} 
+
+
+Then, our BCE Dice Loss is:
+
+\begin{equation}
+Loss =  Diceloss + BCE
+\end{equation}
 
 \subsubsection{Hausdorff distance}
 The Hausdorff distance is a metric to calculate the maximum of the difference between two sets of coordinates.\newline

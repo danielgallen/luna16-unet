@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  26 NOV 2018 14:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  26 NOV 2018 14:21
 entering extended mode
 **./report.tex
 (report.tex
@@ -299,9 +299,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--26
 
  <./files/ctscans.jpg> <./files/deepmedic.png>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 35.
+(Font)              <7> on input line 31.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 35.
+(Font)              <5> on input line 31.
 ) (doc/relatedwork.tex) (doc/process.tex
 <files/Fulllayoutprediction.png, id=12, 1385.175pt x 965.6075pt>
 File: files/Fulllayoutprediction.png Graphic file (type png)
@@ -314,7 +314,7 @@ Overfull \hbox (0.84283pt too wide) in paragraph at lines 10--11
 [][] 
  []
 
-) [2 <./files/unetstructure.jpg> <./files/Fulllayoutprediction.png>]
+[2 <./files/unetstructure.jpg> <./files/Fulllayoutprediction.png>])
 (doc/evaluation.tex) (doc/conclusion.tex) (report.bbl)
 
 ** Conference Paper **
@@ -348,16 +348,17 @@ cm/cmex10.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmmi10.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/steff/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/steff/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/steff
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:
-/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb
-><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8
-a.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/u
-tmr8a.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/tim
-es/utmri8a.pfb>
-Output written on report.pdf (3 pages, 1118279 bytes).
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/steff/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/
+Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+sy7.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times
+/utmb8a.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/t
+imes/utmbi8a.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+urw/times/utmr8a.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/urw/times/utmri8a.pfb>
+Output written on report.pdf (3 pages, 1132679 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
+ 63 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
