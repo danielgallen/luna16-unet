@@ -7,8 +7,7 @@ from tensorflow.contrib.keras import losses
 from tensorflow.contrib.keras import layers
 
 # ---------------------------
-# prediciting the label for one image and export it to a nii.gz file
-# !! just one image can be in test directory!!
+# Predicting files in test directory
 # ---------------------------
 
 # global variables
@@ -38,7 +37,7 @@ def bce_dice_loss(y_true, y_pred):
 
 # load trained model
 print("Loading model")
-save_model_path = './temp/finalweights2.hdf5'
+save_model_path = './temp/weights.hdf5'
 model = models.load_model(save_model_path, custom_objects={'bce_dice_loss': bce_dice_loss, 'dice_loss': dice_loss})
 
 files = os.listdir(directoryOfFiles)
@@ -74,8 +73,8 @@ for filename in files:
         print(np.amax(predict))
         print(predict.shape)
         predictlabel = predict
-        predictlabel[predictlabel > 0.7] = 1
-        predictlabel[predictlabel < 0.9] = 0
+        predictlabel[predictlabel > 0.2] = 1
+        predictlabel[predictlabel != 1] = 0
 
         # export it to a .nii.gz
         print("Export to file")

@@ -5,7 +5,7 @@ from tensorflow.contrib.keras import layers
 from tensorflow.contrib.keras import models
 from tensorflow.contrib.keras import losses
 import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split
+#from sklearn.model_selection import train_test_split
 
 # global variables
 # Change to relative path
@@ -60,7 +60,7 @@ def create_model(img_shape):
     decoder2 = decoder_block(decoder3, encoder2, 128)
     decoder1 = decoder_block(decoder2, encoder1, 64)
     decoder0 = decoder_block(decoder1, encoder0, 32)
-    outputs = layers.Conv2D(1, (1, 1), activation='sigmoid')(decoder0)
+    outputs = layers.Conv2D(1, (1, 1), activation='sigmoid')(decoder0) # change to perceptron?
     model = models.Model(inputs=[inputs], outputs=[outputs])
     return model
 
@@ -85,7 +85,7 @@ def bce_dice_loss(y_true, y_pred):
     loss = losses.binary_crossentropy(y_true, y_pred) + dice_loss(y_true, y_pred)
     return loss
 
-
+# Feeds the model fitting function with data
 def generator(features, labels):
     batch_size = 3 
     batch_features = np.zeros((batch_size, 512, 512, 1))
@@ -109,7 +109,7 @@ input = np.moveaxis(input, -1, 0)
 labels = np.moveaxis(labels, -1, 0)
 # input = input[:10,:,:,:]
 # labels = labels[:10,:,:,:]
-x_train, x_val, y_train, y_val = train_test_split(input, labels, test_size=0.1)
+#x_train, x_val, y_train, y_val = train_test_split(input, labels, test_size=0.1)
 
 # create the model
 print("Creating the model")
@@ -126,7 +126,7 @@ model.summary()
 cp = tf.contrib.keras.callbacks.ModelCheckpoint(filepath=save_model_path, monitor='dice_loss', save_best_only=True,
                                                 verbose=1)
 
-history = model.fit_generator(generator(x_train, y_train), epochs=epochs, steps_per_epoch=steps_per_epoch, callbacks=[cp])
+history = model.fit_generator(generator(input, labels), epochs=epochs, steps_per_epoch=steps_per_epoch, callbacks=[cp])
 
 dice = history.history['dice_loss']
 # val_dice = history.history['val_dice_loss']

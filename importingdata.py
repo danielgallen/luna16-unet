@@ -32,7 +32,5 @@ def import_data(data_directory):
     print("Import done, Input Size:")
     print(input_matrix.shape)
     print(labels_matrix.shape)
-    #labels_matrix[labels_matrix == 4] = 3
-    #labels_matrix[labels_matrix > 4] = 0
-    #labels_matrix[labels_matrix == 3] = 1
+    labels_matrix[labels_matrix == 2] = 0 # Change for bronchus
     return [input_matrix, labels_matrix]
