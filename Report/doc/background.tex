@@ -31,5 +31,21 @@ formulas
 \subsubsection{BCE Dice Loss}
 
 \subsubsection{Hausdorff distance}
+The Hausdorff distance is a metric to calculate the maximum of the difference between two sets of coordinates.\newline
+For the set of coordinates $A$ and $B$ it is defined as following
+
+\begin{equation}
+	d_{hausdorff} (A,B) = \max_{a \in A} (\min_{b \in B} d(a,b))
+\end{equation} 
+
+where $d(a,b)$ represents the Euclid distance between the two coordinates $a$ and $b$. It can be interpreted as the maximum deviation of set $B$ to set $A$ and is therefore a important metric for evaluating the difference between two label maps.
 
 \subsubsection{Mean distance}
+The mean distance is similar to the Hausdorff metric but is a measurement for the mean of the difference between two sets of coordinates.\newline
+It is therefore defined as following
+
+\begin{equation}
+	d_{mean} (A,B) = \frac{1}{|A|} \sum_{a \in A} \min_{b \in B} d(a,b)
+\end{equation}
+
+where again $d(a,b)$ represents the Euclid distance between the two coordinates $a$ and $b$. It furthermore can be seen as the average difference between the two sets and will also be used for evaluation.
