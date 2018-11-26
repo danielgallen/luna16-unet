@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  26 NOV 2018 13:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  26 NOV 2018 13:53
 entering extended mode
 **./report.tex
 (report.tex
@@ -237,18 +237,18 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 ) (doc/introduction.tex
-<files/scan_picture.jpg, id=1, 325.71687pt x 210.28563pt>
-File: files/scan_picture.jpg Graphic file (type jpg)
-<use files/scan_picture.jpg>
-Package pdftex.def Info: files/scan_picture.jpg  used on input line 9.
-(pdftex.def)             Requested size: 252.84283pt x 163.2424pt.
+<files/Fulllayoutprediction.png, id=1, 1385.175pt x 965.6075pt>
+File: files/Fulllayoutprediction.png Graphic file (type png)
+<use files/Fulllayoutprediction.png>
+Package pdftex.def Info: files/Fulllayoutprediction.png  used on input line 9.
+(pdftex.def)             Requested size: 252.84283pt x 176.24768pt.
 
 Overfull \hbox (0.84283pt too wide) in paragraph at lines 9--10
 [][] 
  []
 
 ) (doc/background.tex
-<files/deepmedic.png, id=2, 1018.80624pt x 326.21875pt>
+<files/deepmedic.png, id=3, 1018.80624pt x 326.21875pt>
 File: files/deepmedic.png Graphic file (type png)
 <use files/deepmedic.png>
 Package pdftex.def Info: files/deepmedic.png  used on input line 8.
@@ -271,7 +271,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
-<files/unetstructure.jpg, id=3, 704.6325pt x 481.8pt>
+[1{C:/Users/steff/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+ <./files/Fulllayoutprediction.png>]
+<files/unetstructure.jpg, id=13, 704.6325pt x 481.8pt>
 File: files/unetstructure.jpg Graphic file (type jpg)
 <use files/unetstructure.jpg>
 Package pdftex.def Info: files/unetstructure.jpg  used on input line 17.
@@ -282,23 +286,17 @@ Overfull \hbox (0.84283pt too wide) in paragraph at lines 17--18
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 22--26
 
  []
 
-[1{C:/Users/steff/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-
- <./files/scan_picture.jpg>]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 35.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 35.
-) (doc/relatedwork.tex) (doc/process.tex) (doc/evaluation.tex) (doc/conclusion.
-tex) (report.bbl [2 <./files/deepmedic.png> <./files/unetstructure.jpg>])
+) (doc/relatedwork.tex) (doc/process.tex) (doc/evaluation.tex)
+(doc/conclusion.tex) [2 <./files/deepmedic.png> <./files/unetstructure.jpg>]
+(report.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -315,8 +313,8 @@ Before submitting the final camera ready copy, remember to:
 ] (report.aux) ) 
 Here is how much of TeX's memory you used:
  2297 strings out of 492973
- 39444 string characters out of 3126692
- 109665 words of memory out of 3000000
+ 39484 string characters out of 3126692
+ 107665 words of memory out of 3000000
  6146 multiletter control sequences out of 15000+200000
  33007 words of font info for 62 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -334,9 +332,9 @@ mes/utmb8a.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/ur
 w/times/utmbi8a.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
 e1/urw/times/utmr8a.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (3 pages, 544213 bytes).
+Output written on report.pdf (3 pages, 1074908 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
+ 58 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
