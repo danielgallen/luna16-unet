@@ -3,14 +3,19 @@
 overview
 
 \subsection{dataset}
-The Luna16 dataset consists of about 10 GB of mdh and raw files. The files contain a varying number of slices of 512 x 512 pixel images. For this work just a subset of the data was used for training and evaluation.
+
+The used dataset is from the LUNA16 challenge and each scan contains a number of slices. The algorithm creates a label map for each slice marking every pixel that is part of the lung. An example of one scan and the corresponding labeling is shown in figure \ref{scan_picture}.
+
+\begin{figure}[h!]
+	\includegraphics[width=0.49\textwidth, angle=0]{files/Fulllayoutprediction.png}
+	\caption{CT scan of the lung and labeled lung (green) and the tube (yellow). The first picture represents one slice of the image, the second a 3D representation of the label and the lower two pictures are visualizations of the side and front view.}
+	\label{scan_picture}
+\end{figure}
+
+The dataset consists of about 10 GB of mdh and raw files. The files contain a varying number of slices of 512 x 512 pixel grey-scale images and corresponding 512 x 512 pixel label maps. Since computational resources were limited just a subset of the data was used for this work. Furthermore the more detailed label map was reduced to one label for the lungs and one label for the tube.
 
 \subsection{Preprocessing of image data}
-file conversion
-normalization on mean and sd
-picture of normalized
-loading data in numpy
-label transformation to just one/two labels
+Each file was converted to a NIfTI image file for better processing and visualization. For more appropriate input values each image was normalized ($\mu = 0.0$ and $\sigma = 1.0$) separately.
 
 \subsection{Training and validation}
 

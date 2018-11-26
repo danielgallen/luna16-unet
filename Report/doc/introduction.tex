@@ -2,12 +2,11 @@
 
 Since hardware specifications and computational power increased dramatically in the last years machine learning approaches can be applied in various disciplines today. On top of that the progress in research on convolutional neuronal networks (CNN) made it a very powerful tool for image processing where information is gained from image data.\newline
 One challenging application is medical image computing (MIC). The main goal of MIC is to extract clinically relevant information or knowledge from medical images. Furthermore Segmentation is the process of partitioning an image into different meaningful segments (e. g. organs, bones, ...).\newline
-In this project the goal is to segment the lung of a human body from computed tomography (CT) scans.\newline
-The used dataset is from the LUNA16 challenge \cite{luna} and each scan contains a number of slices which are 512 x 512 pixel greyscale images. The algorithm creates a 512 x 512 pixel label map for each slice marking every pixel that is part of the lung. An example of one scan and the corresponding labeling is shown in figure \ref{scan_picture}.
+In this project the goal was to segment the lung of a human body from computed tomography (CT) scans of the LUNA16 dataset \cite{luna}.\newline
 
 \begin{figure}[h!]
-	\includegraphics[width=0.49\textwidth, angle=0]{files/Fulllayoutprediction.png}
-	\caption{CT scan of the lung and labeled parts. The first picture represents one slice of the image, the second a 3D representation of the label and the lower two pictures are visualizations of the side and front view.}
+	\includegraphics[width=0.49\textwidth, angle=0]{files/ctscans.jpg}
+	\caption{CT scan from the LUNA16 dataset}
 	\label{scan_picture}
 \end{figure}
 
