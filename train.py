@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 directoryOfFiles = "./data/train/"
 img_shape = (512, 512, 1)
 epochs = 10
-steps_per_epoch = 20
+steps_per_epoch = 715 
 
 
 # functions for creating a unet model
@@ -111,10 +111,19 @@ labels = np.moveaxis(labels, -1, 0)
 # labels = labels[:10,:,:,:]
 #x_train, x_val, y_train, y_val = train_test_split(input, labels, test_size=0.1)
 
+# Display sample slice image
+from PIL import Image
+test = np.squeeze(labels)
+print(test.shape)
+img = Image.fromarray(test[:,:,50], 'L')
+img.show()
+
 # create the model
 print("Creating the model")
-num_train_examples = x_train.shape[0]
-num_val_examples = x_val.shape[0]
+#num_train_examples = x_train.shape[0]
+#num_val_examples = x_val.shape[0]
+print("Number of training examples")
+print(input.shape[0])
 
 model = create_model(img_shape)
 
