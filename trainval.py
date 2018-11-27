@@ -5,7 +5,7 @@ from tensorflow.contrib.keras import layers
 from tensorflow.contrib.keras import models
 from tensorflow.contrib.keras import losses
 import matplotlib.pyplot as plt
-#from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split
 
 # global variables
 # Change to relative path
@@ -130,7 +130,7 @@ model.summary()
 cp = tf.contrib.keras.callbacks.ModelCheckpoint(filepath=save_model_path, monitor='val_dice_loss', save_best_only=True,
                                                 verbose=1)
 
-history = model.fit_generator(generator(x_train, y_train), epochs=epochs, validation_data=generator(x_val, y_val), callbacks=[cp])
+history = model.fit_generator(generator(x_train, y_train), epochs=epochs, steps_per_epoch=steps_per_epoch, validation_data=(x_val, y_val), callbacks=[cp])
 
 dice = history.history['dice_loss']
 val_dice = history.history['val_dice_loss']
