@@ -11,8 +11,8 @@ from sklearn.model_selection import train_test_split
 # Change to relative path
 directoryOfFiles = "./data/train/"
 img_shape = (512, 512, 1)
-epochs = 10
-steps_per_epoch = 715 
+epochs = 50
+steps_per_epoch = 893 
 
 
 # functions for creating a unet model

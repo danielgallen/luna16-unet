@@ -62,7 +62,7 @@ for filename in files:
         input = np.reshape(input, [input.shape[0], input.shape[1], 1, input.shape[2]])
         print(input.shape)
         input = np.moveaxis(input, -1, 0)
-        #input = input[:2,:,:,:]
+        #input = input[0:100,:,:,:]
 
 
         # predict label for one image
