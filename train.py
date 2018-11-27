@@ -111,13 +111,6 @@ labels = np.moveaxis(labels, -1, 0)
 # labels = labels[:10,:,:,:]
 #x_train, x_val, y_train, y_val = train_test_split(input, labels, test_size=0.1)
 
-# Display sample slice image
-from PIL import Image
-test = np.squeeze(labels)
-print(test.shape)
-img = Image.fromarray(test[:,:,50], 'L')
-img.show()
-
 # create the model
 print("Creating the model")
 #num_train_examples = x_train.shape[0]
