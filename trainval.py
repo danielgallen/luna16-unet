@@ -1,18 +1,19 @@
 from importingdata import import_data
 import numpy as np
 import tensorflow as tf
+import nibabel as nib
 from tensorflow.contrib.keras import layers
 from tensorflow.contrib.keras import models
 from tensorflow.contrib.keras import losses
 import matplotlib.pyplot as plt
-#from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split
 
 # global variables
 # Change to relative path
 directoryOfFiles = "./data/train/"
 img_shape = (512, 512, 1)
-epochs = 10
-steps_per_epoch = 715 
+epochs = 50 
+steps_per_epoch = 893 
 
 
 # functions for creating a unet model
@@ -130,7 +131,9 @@ model.summary()
 cp = tf.contrib.keras.callbacks.ModelCheckpoint(filepath=save_model_path, monitor='val_dice_loss', save_best_only=True,
                                                 verbose=1)
 
-history = model.fit_generator(generator(x_train, y_train), epochs=epochs, validation_data=generator(x_val, y_val), callbacks=[cp])
+#history = model.fit_generator(generator(x_train, y_train), epochs=epochs, steps_per_epoch=steps_per_epoch, validation_data=(x_val, y_val), callbacks=[cp])
+
+history = model.fit(x_train, y_train, epochs=epochs, batch_size=3, validation_data=(x_val, y_val), callbacks=[cp])
 
 dice = history.history['dice_loss']
 val_dice = history.history['val_dice_loss']
@@ -154,3 +157,24 @@ plt.legend(loc='upper right')
 plt.title('Training and Validation Loss')
 
 plt.show()
+
+predicted = model.predict(x_val, verbose = 1)
+print("Prediction Shape: ")
+print(predicted.shape)
+predicted = np.moveaxis(predicted, 0, -1)
+predicted = np.squeeze(predicted)
+print("New Shape: ")
+print(predicted.shape)
+
+x_val = np.moveaxis(x_val, 0, -1)
+x_val = np.squeeze(x_val)
+y_val = np.moveaxis(y_val, 0, -1)
+y_val = np.squeeze(y_val)
+
+print("Export to file")
+saveimg = nib.Nifti1Image(predicted, affine=np.eye(4))
+nib.save(saveimg, "./prediction.nii.gz")
+saveval = nib.Nifti1Image(x_val, affine=np.eye(4))
+nib.save(saveval, "./imageval.nii.gz")
+savelab = nib.Nifti1Image(y_val, affine=np.eye(4))
+nib.save(savelab, "./val-label.nii.gz")

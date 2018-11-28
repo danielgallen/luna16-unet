@@ -32,5 +32,7 @@ def import_data(data_directory):
     print("Import done, Input Size:")
     print(input_matrix.shape)
     print(labels_matrix.shape)
+    print("Max Label:")
+    print(np.amax(labels_matrix))
     labels_matrix[labels_matrix == 2] = 0 # Change for bronchus
     return [input_matrix, labels_matrix]

@@ -47,7 +47,7 @@ for filename in files:
     input_shape = [512, 512]
     input_matrix = np.zeros((input_shape[0], input_shape[1], 0))
 
-    print("Start importing data, Progress:")
+    print("Start importing data from: " + filename)
     directory = directoryOfFiles + filename
     if directory.find("normalized") >= 0:
         current_image = nib.load(directory).get_fdata()
@@ -62,18 +62,18 @@ for filename in files:
         input = np.reshape(input, [input.shape[0], input.shape[1], 1, input.shape[2]])
         print(input.shape)
         input = np.moveaxis(input, -1, 0)
-        #input = input[:2,:,:,:]
+        #input = input[0:100,:,:,:]
 
 
         # predict label for one image
         print("Predict")
-        predict = model.predict(input)
+        predict = model.predict(input, batch_size=3)
         predict = np.moveaxis(predict, 0, -1)
         predict = np.squeeze(predict)
         print(np.amax(predict))
         print(predict.shape)
         predictlabel = predict
-        predictlabel[predictlabel > 0.2] = 1
+        predictlabel[predictlabel > 0.05] = 1
         predictlabel[predictlabel != 1] = 0
 
         # export it to a .nii.gz
