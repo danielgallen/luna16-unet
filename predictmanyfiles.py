@@ -67,7 +67,7 @@ for filename in files:
 
         # predict label for one image
         print("Predict")
-        predict = model.predict(input)
+        predict = model.predict(input, batch_size=3)
         predict = np.moveaxis(predict, 0, -1)
         predict = np.squeeze(predict)
         print(np.amax(predict))
