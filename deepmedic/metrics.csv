@@ -15,3 +15,5 @@ lung_25-label.nii,pred_14_Segm.nii,0.99105,123.814,0.0527751
 lung_26-label.nii,pred_15_Segm.nii,0.836559,152.653,10.7152
 lung_27-label.nii,pred_16_Segm.nii,0.987429,110.649,0.428743
 lung_28-label.nii,pred_17_Segm.nii,0.984399,85.3132,0.310808
+lung_29-label.nii,pred_18_Segm.nii,0.985767,121.969,0.541755
+lung_30-label.nii,pred_19_Segm.nii,0.973681,87.3405,0.697971
