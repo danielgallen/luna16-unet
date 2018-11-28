@@ -1,0 +1,17 @@
+lung_12-label.nii,pred_1_Segm.nii,0.978031,96.7284,0.163466
+lung_13-label.nii,pred_2_Segm.nii,0.988959,103.355,0.13542
+lung_14-label.nii,pred_3_Segm.nii,0.977643,148.986,0.810508
+lung_15-label.nii,pred_4_Segm.nii,0.963871,102.649,1.35033
+lung_16-label.nii,pred_5_Segm.nii,0.973665,131.765,1.08195
+lung_17-label.nii,pred_6_Segm.nii,0.98998,84.1061,0.070238
+lung_18-label.nii,pred_7_Segm.nii,0.989907,105.11,0.217566
+lung_19-label.nii,pred_8_Segm.nii,0.979606,153.204,0.816912
+lung_20-label.nii,pred_9_Segm.nii,0.91226,156.411,5.68308
+lung_21-label.nii,pred_10_Segm.nii,0.950297,112.207,2.20244
+lung_22-label.nii,pred_11_Segm.nii,0.971666,131.738,0.814274
+lung_23-label.nii,pred_12_Segm.nii,0.98022,126.462,0.533121
+lung_24-label.nii,pred_13_Segm.nii,0.980593,136.171,0.910954
+lung_25-label.nii,pred_14_Segm.nii,0.99105,123.814,0.0527751
+lung_26-label.nii,pred_15_Segm.nii,0.836559,152.653,10.7152
+lung_27-label.nii,pred_16_Segm.nii,0.987429,110.649,0.428743
+lung_28-label.nii,pred_17_Segm.nii,0.984399,85.3132,0.310808
