@@ -47,7 +47,7 @@ for filename in files:
     input_shape = [512, 512]
     input_matrix = np.zeros((input_shape[0], input_shape[1], 0))
 
-    print("Start importing data, Progress:")
+    print("Start importing data from: " + filename)
     directory = directoryOfFiles + filename
     if directory.find("normalized") >= 0:
         current_image = nib.load(directory).get_fdata()
