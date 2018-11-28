@@ -1,6 +1,7 @@
 from importingdata import import_data
 import numpy as np
 import tensorflow as tf
+import nibabel as nib
 from tensorflow.contrib.keras import layers
 from tensorflow.contrib.keras import models
 from tensorflow.contrib.keras import losses
