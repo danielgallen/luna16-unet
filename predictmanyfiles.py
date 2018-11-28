@@ -73,7 +73,7 @@ for filename in files:
         print(np.amax(predict))
         print(predict.shape)
         predictlabel = predict
-        predictlabel[predictlabel > 0.2] = 1
+        predictlabel[predictlabel > 0.05] = 1
         predictlabel[predictlabel != 1] = 0
 
         # export it to a .nii.gz
