@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 # Change to relative path
 directoryOfFiles = "./data/train/"
 img_shape = (512, 512, 1)
-epochs = 50
+epochs = 35 
 steps_per_epoch = 893 
 
 
@@ -130,7 +130,9 @@ model.summary()
 cp = tf.contrib.keras.callbacks.ModelCheckpoint(filepath=save_model_path, monitor='val_dice_loss', save_best_only=True,
                                                 verbose=1)
 
-history = model.fit_generator(generator(x_train, y_train), epochs=epochs, steps_per_epoch=steps_per_epoch, validation_data=(x_val, y_val), callbacks=[cp])
+#history = model.fit_generator(generator(x_train, y_train), epochs=epochs, steps_per_epoch=steps_per_epoch, validation_data=(x_val, y_val), callbacks=[cp])
+
+history = model.fit(x_train, y_train, epochs=epochs, batch_size=3, validation_data=(x_val, y_val), callbacks=[cp])
 
 dice = history.history['dice_loss']
 val_dice = history.history['val_dice_loss']
@@ -154,3 +156,14 @@ plt.legend(loc='upper right')
 plt.title('Training and Validation Loss')
 
 plt.show()
+
+predicted = model.predict(x_val, verbose = 1)
+print("Prediction Shape: " + predicted.shape)
+predicted = np.moveaxis(predicted, 0, -1)
+predicted = np.squeeze(predicted)
+print("New Shape: ")
+print(predicted.shape)
+
+print("Export to file")
+saveimg = nib.Nifti1Image(predicted, affine=np.eye(4))
+nib.save(saveimg, "./prediction.nii.gz")
