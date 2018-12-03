@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  3 DEC 2018 10:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  3 DEC 2018 10:14
 entering extended mode
 **./report.tex
 (report.tex
@@ -328,27 +328,27 @@ Overfull \hbox (0.84283pt too wide) in paragraph at lines 10--11
 
 [2 <./files/unetstructure.jpg> <./files/Fulllayoutprediction.png>])
 (doc/evaluation.tex
-Overfull \hbox (111.80661pt too wide) in paragraph at lines 11--20
-[][] 
- []
-
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 15.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 15.
 <files/jpgunettrain.png, id=25, 939.51pt x 498.663pt>
 File: files/jpgunettrain.png Graphic file (type png)
 <use files/jpgunettrain.png>
-Package pdftex.def Info: files/jpgunettrain.png  used on input line 22.
+Package pdftex.def Info: files/jpgunettrain.png  used on input line 30.
 (pdftex.def)             Requested size: 252.84283pt x 134.19948pt.
 
-Overfull \hbox (0.84283pt too wide) in paragraph at lines 22--23
+Overfull \hbox (0.84283pt too wide) in paragraph at lines 30--31
 [][] 
  []
 
 <files/deepmedictrain.png, id=26, 526.96875pt x 222.33063pt>
 File: files/deepmedictrain.png Graphic file (type png)
 <use files/deepmedictrain.png>
-Package pdftex.def Info: files/deepmedictrain.png  used on input line 28.
+Package pdftex.def Info: files/deepmedictrain.png  used on input line 36.
 (pdftex.def)             Requested size: 252.84283pt x 106.67676pt.
 
-Overfull \hbox (0.84283pt too wide) in paragraph at lines 28--29
+Overfull \hbox (0.84283pt too wide) in paragraph at lines 36--37
 [][] 
  []
 
@@ -358,10 +358,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <files/preddeepmedic.png, id=27, 626.84187pt x 199.24437pt>
 File: files/preddeepmedic.png Graphic file (type png)
 <use files/preddeepmedic.png>
-Package pdftex.def Info: files/preddeepmedic.png  used on input line 34.
+Package pdftex.def Info: files/preddeepmedic.png  used on input line 42.
 (pdftex.def)             Requested size: 252.84283pt x 80.36823pt.
 
-Overfull \hbox (0.84283pt too wide) in paragraph at lines 34--35
+Overfull \hbox (0.84283pt too wide) in paragraph at lines 42--43
 [][] 
  []
 
@@ -371,10 +371,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <files/predunet.png, id=28, 629.35126pt x 196.23312pt>
 File: files/predunet.png Graphic file (type png)
 <use files/predunet.png>
-Package pdftex.def Info: files/predunet.png  used on input line 40.
+Package pdftex.def Info: files/predunet.png  used on input line 48.
 (pdftex.def)             Requested size: 252.84283pt x 78.83618pt.
 
-Overfull \hbox (0.84283pt too wide) in paragraph at lines 40--41
+Overfull \hbox (0.84283pt too wide) in paragraph at lines 48--49
 [][] 
  []
 
@@ -400,11 +400,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2322 strings out of 492973
- 40069 string characters out of 3126692
- 109704 words of memory out of 3000000
- 6166 multiletter control sequences out of 15000+200000
- 33007 words of font info for 62 fonts, out of 3000000 for 9000
+ 2339 strings out of 492973
+ 40241 string characters out of 3126692
+ 109712 words of memory out of 3000000
+ 6176 multiletter control sequences out of 15000+200000
+ 36554 words of font info for 70 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
  41i,7n,25p,874b,234s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
@@ -421,7 +421,7 @@ sy7.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times
 imes/utmbi8a.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
 urw/times/utmr8a.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on report.pdf (3 pages, 2122355 bytes).
+Output written on report.pdf (3 pages, 2122779 bytes).
 PDF statistics:
  71 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
