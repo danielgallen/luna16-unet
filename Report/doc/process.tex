@@ -27,3 +27,9 @@ The U-Net architecture was built up according to the structure in figure \ref{un
 \subsection{Dealing with the big dataset}
 Although the dataset was reduced to 10 CT scans some adjustment in the training process still had to be made to handle the size of the dataset.\newline
 Therefore, a generator was defined to reduce the data size that will be fed to the training process at once. The generator feeds just a batch of images in real time to the training process instead of loading the whole dataset at once.
+
+\subsection{Prediction, displaying and calculating metrics}
+
+- prediction on 20 ct scans
+- Nifty images created for displaying
+- three metrics were calculated on test scans
