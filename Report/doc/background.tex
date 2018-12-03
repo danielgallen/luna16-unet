@@ -1,8 +1,8 @@
 % !TEX root = ../Report.tex
 \subsection{DeepMedic architecture}
 DeepMedic is a 3D neural network. It has been initially used for segmentations in biomedical 3D scans, especially for detecting brain anomalies such as injuries, tumors and lesions. In this project we will try this algorithm for lung segmentations. \newline 
-A DeepMedic model consists of detecting a particular pattern in an image. This is achieved by multi-layer convolution in the network. We distinguish two components in the model. First there is a three-dimension convolutional neural network (CNN) model used for dense segmentation, then  a three-dimension fully connected conditional random field (CRF) model for deeper predictions. (Might we only use the first component?) \newline
-Each layer of the CNN model contains channels called feature maps, i.e. a group of neurons identifying a feature in the previous layer. Then a feature is defined by associated kernel weights. Number of inputs, outputs, feature-maps and kernels are tunable.
+A DeepMedic model consists of detecting a particular pattern in an image. This is achieved by multi-layer convolution in the network. We distinguish two components in the model. First there is a three-dimension convolutional neural network (CNN) model used for dense segmentation (figure \ref{deepmedic} left part), then  a three-dimension fully connected conditional random field (CRF) model which does post-processing and handles the hard segmentation as well (figure \ref{deepmedic} right part). We can also notice a double-path network composed of a regular-resolution and a lower-resolution path. This second one mainly prevents from overfitting.
+Each layer of the CNN model contains channels called feature maps, i.e. a group of neurons identifying a feature in the previous layer. Then featurer are defined by associated kernel weights. Number of inputs, outputs, feature-maps and kernels are tunable.
 
 \begin{figure}[h!]
 	\includegraphics[width=0.49\textwidth, angle=0]{files/deepmedic.png}
