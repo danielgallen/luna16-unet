@@ -17,3 +17,5 @@ lung_27-label.nii,pred_16_Segm.nii,0.987429,110.649,0.428743
 lung_28-label.nii,pred_17_Segm.nii,0.984399,85.3132,0.310808
 lung_29-label.nii,pred_18_Segm.nii,0.985767,121.969,0.541755
 lung_30-label.nii,pred_19_Segm.nii,0.973681,87.3405,0.697971
+,,,,
+average ,,0.968188579,119.5069053,1.449342689
