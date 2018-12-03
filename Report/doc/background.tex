@@ -6,7 +6,7 @@ Each layer of the CNN model contains channels called feature maps, i.e. a group 
 
 \begin{figure}[h!]
 	\includegraphics[width=0.49\textwidth, angle=0]{files/deepmedic.png}
-	\caption{ Overview of DeepMedic architecture}
+	\caption{Structure of DeepMedic architecture}
 	\label{deepmedic}
 \end{figure}
 
@@ -38,7 +38,7 @@ dice loss = 1 - \frac{2*(Y_{true} \bigcap Y_{prediction}) + 1}{|Y_{true}| + |Y_{
 We also use binary cross-entropy (BCE) to measure the performance of our classification model. For labels y and predcted probabilities p, binary cros-entropy is:
 
 \begin{equation}
-BCE = - \frac{1}{n} \sum_{i=1}^{n}(y \log{(p_i)} + (1-y_i)\log{(1-p_i)})
+BCE = - \frac{1}{n} \sum_{i=1}^{n}(y_i \log{(p_i)} + (1-y_i)\log{(1-p_i)})
 \end{equation} 
 
 
@@ -56,7 +56,7 @@ For the set of coordinates $A$ and $B$ it is defined as following
 	d_{hausdorff} (A,B) = \max_{a \in A} (\min_{b \in B} d(a,b))
 \end{equation} 
 
-where $d(a,b)$ represents the Euclid distance between the two coordinates $a$ and $b$. It can be interpreted as the maximum deviation of set $B$ to set $A$ and is therefore a important metric for evaluating the difference between two label maps.
+where $d(a,b)$ represents the Euclid distance between the two coordinates $a$ and $b$. It can be interpreted as the maximum distance of set $B$ to set $A$ and is therefore a important metric for evaluating the difference between two label maps.
 
 \subsubsection{Mean distance}
 The mean distance is similar to the Hausdorff metric but is a measurement for the mean of the difference between two sets of coordinates.\newline
