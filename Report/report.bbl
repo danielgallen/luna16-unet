@@ -27,4 +27,11 @@
   \url{https://luna16.grand-challenge.org/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{deepmedic}
+\BIBentryALTinterwordspacing
+``Efficient multi-scale 3d convolutional neural network for brain lesion
+  segmentation.'' [Online]. Available:
+  \url{https://github.com/Kamnitsask/deepmedic}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}
