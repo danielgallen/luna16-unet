@@ -3,34 +3,10 @@
 \subsection{Setup}
 
 Python 3.6 or over can be chosen to design this solution. NiBabel package was used to deal with specificity of medical images. TensorFlow and Keras are additional libraries required to build training models and calculate metrics.
+- slicer
 
-\subsection{Evaluation on training model}
+\subsection{Training processes}
 graph loss on training evaluation (dice loss, bce dice loss, batch size (correlates to gpu), epochs, steps per epoch, optimizer)
-prediction
-image on label and prediction 
-evaluating and examining models with hausdorff and mean distance on pictures (graphs or statistics, table)
-comparison of unet and deepmedic
-
-explain high hausdorff and how to reduce it
-
-
-\begin{table}[h!]
-	\centering
-	\setlength{\tabcolsep}{10pt}
-	\renewcommand{\arraystretch}{1.5}
-	\begin{tabular}{c c c c}
-		\hline 
-		Architecture & Dice & Hausdorff & Mean \\
-		& Coefficient & distance (mm) & Distance (mm) \\ 
-		\hline 
-		DeepMedic & 0.968 & 119.50 & 1.45 \\ 
-		U-Net & 0.976 & 103.21 & 0.33 \\ 
-		\hline
-		\newline 
-	\end{tabular}
-	\caption{Dice Loss, Hausdorff distance and mean distance on 20 evaluation CT scans for the DeepMedic and the U-Net architecture.}
-	\label{table_result}
-\end{table}
 
 \begin{figure}[h!]
 	\includegraphics[width=0.49\textwidth, angle=0]{files/deepmedictrain.png}
@@ -56,3 +32,30 @@ explain high hausdorff and how to reduce it
 	\caption{Example prediction of the DeepMedic architecture on one CT scan. The original label map for training is displayed on the left while the prediction of the network is shown on the right.}
 	\label{pred_unet}
 \end{figure}
+
+
+\subsection{Evaluation of the two architectures}
+
+
+comparison of unet and deepmedic
+
+explain high hausdorff and how to reduce it
+
+
+\begin{table}[h!]
+	\centering
+	\setlength{\tabcolsep}{10pt}
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{c c c c}
+		\hline 
+		Architecture & Dice & Hausdorff & Mean \\
+		& Coefficient & distance (mm) & Distance (mm) \\ 
+		\hline 
+		DeepMedic & 0.968 & 119.50 & 1.45 \\ 
+		U-Net & 0.976 & 103.21 & 0.33 \\ 
+		\hline
+		\newline 
+	\end{tabular}
+	\caption{Dice Loss, Hausdorff distance and mean distance (on lungs and bronchus) averaged over 20 evaluation CT scans for the DeepMedic and the U-Net architecture.}
+	\label{table_result}
+\end{table}
