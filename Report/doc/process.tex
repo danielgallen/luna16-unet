@@ -12,12 +12,12 @@ The used dataset is from the LUNA16 challenge and each scan contains a number of
 	\label{scan_picture}
 \end{figure}
 
-The dataset consists of about 10 GB of mdh and raw files. The files contain a varying number of slices of 512 x 512 pixel grey-scale images and corresponding 512 x 512 pixel label maps. Since computational resources were limited just a subset of the data was used for this work. Furthermore the more detailed label map was reduced to one label for the lungs and one label for the bronchus.\newline
+The dataset consists of about 10 GB of mdh and raw image files. The files contain a varying number of slices of 512 x 512 pixel grey-scale images and corresponding 512 x 512 pixel label maps. Since computational resources were limited just a subset of the data was used for this work. Furthermore the more detailed label map was reduced to one label for the lungs and one label for the bronchus.\newline
 From the LUNA16 dataset 10 CT scans for training and 20 CT scans for evaluation were chosen randomly.
 
 \subsection{Preprocessing of image data}
-Each file was converted to a NIfTI image file for better processing and visualization. These files contain all grey-scale image slices of one scan. For more appropriate input values each image was normalized ($\mu = 0.0$ and $\sigma = 1.0$) separately.
-- by hand extraction
+Each file was converted to a NIfTI image file for better processing and visualization. These files contain all grey-scale image slices of one scan. For more appropriate input values, each image was normalized following the standard normal distribution ($\mu = 0.0$ and $\sigma = 1.0$) separately.\newline
+Then, it was necessary to implement data importation to properly use them. Data from directory were converted into input and label matrices following the size 512x512 for each slice (on average 200 slices per image).
 
 \subsection{Training and validation}
 Both network architectures were trained on the 2145 slices of the 10 training CT scans over 35 epochs.\newline

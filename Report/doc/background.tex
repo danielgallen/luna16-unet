@@ -27,9 +27,9 @@ In comparison to other fully convolutional segmentation networks, the main featu
 \subsection{Metrics}\label{metrics_chapter}
 
 \subsubsection{Dice Loss}
-We need  validation criteria to build our models. We use a Dice loss coefficient to compare the similarity of two samples. In the following equation, smmooth is added and stands for backpropagation. Ours is defined by: 
+We need  validation criteria to build our models. We use a Dice loss coefficient to compare the similarity of two samples. In the following equation, smooth is added and stands for backpropagation. Ours is defined by: 
 \begin{equation}
-dice loss = 1 - \frac{2*(Y_{true} \bigcap Y_{prediction} + 1)}{|Y_{true}| + |Y_{prediction}| + 1}
+dice loss = 1 - \frac{2*(Y_{true} \bigcap Y_{prediction}) + 1}{|Y_{true}| + |Y_{prediction}| + 1}
 \end{equation} 
 
 
