@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  3 DEC 2018 11:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  3 DEC 2018 11:34
 entering extended mode
 **./report.tex
 (report.tex
@@ -288,7 +288,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
-<files/unetstructure.jpg, id=3, 704.6325pt x 481.8pt>
+[1{C:/Users/steff/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+ <./files/ctscans.jpg> <./files/deepmedic.png>]
+<files/unetstructure.jpg, id=11, 704.6325pt x 481.8pt>
 File: files/unetstructure.jpg Graphic file (type jpg)
 <use files/unetstructure.jpg>
 Package pdftex.def Info: files/unetstructure.jpg  used on input line 17.
@@ -299,17 +303,10 @@ Overfull \hbox (0.84283pt too wide) in paragraph at lines 17--18
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 22--26
 
  []
 
-[1{C:/Users/steff/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-
- <./files/ctscans.jpg> <./files/deepmedic.png>]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 31.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -326,7 +323,10 @@ Overfull \hbox (0.84283pt too wide) in paragraph at lines 10--11
 [][] 
  []
 
-[2 <./files/unetstructure.jpg> <./files/Fulllayoutprediction.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2 <./files/unetstructure.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 23--26
 
  []
@@ -336,7 +336,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 17.
-<files/jpgunettrain.png, id=25, 939.51pt x 498.663pt>
+<files/jpgunettrain.png, id=24, 939.51pt x 498.663pt>
 File: files/jpgunettrain.png Graphic file (type png)
 <use files/jpgunettrain.png>
 Package pdftex.def Info: files/jpgunettrain.png  used on input line 33.
@@ -346,7 +346,7 @@ Overfull \hbox (0.84283pt too wide) in paragraph at lines 33--34
 [][] 
  []
 
-<files/deepmedictrain.png, id=26, 526.96875pt x 222.33063pt>
+<files/deepmedictrain.png, id=25, 526.96875pt x 222.33063pt>
 File: files/deepmedictrain.png Graphic file (type png)
 <use files/deepmedictrain.png>
 Package pdftex.def Info: files/deepmedictrain.png  used on input line 39.
@@ -356,7 +356,7 @@ Overfull \hbox (0.84283pt too wide) in paragraph at lines 39--40
 [][] 
  []
 
-<files/preddeepmedic.png, id=27, 626.84187pt x 199.24437pt>
+<files/preddeepmedic.png, id=26, 626.84187pt x 199.24437pt>
 File: files/preddeepmedic.png Graphic file (type png)
 <use files/preddeepmedic.png>
 Package pdftex.def Info: files/preddeepmedic.png  used on input line 45.
@@ -366,7 +366,10 @@ Overfull \hbox (0.84283pt too wide) in paragraph at lines 45--46
 [][] 
  []
 
-<files/predunet.png, id=28, 629.35126pt x 196.23312pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<files/predunet.png, id=27, 629.35126pt x 196.23312pt>
 File: files/predunet.png Graphic file (type png)
 <use files/predunet.png>
 Package pdftex.def Info: files/predunet.png  used on input line 51.
@@ -379,8 +382,8 @@ Overfull \hbox (0.84283pt too wide) in paragraph at lines 51--52
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (doc/conclusion.tex) (report.bbl [3 <./files/jpgunettrain.png> <./files/deepm
-edictrain.png> <./files/preddeepmedic.png>]
+) (doc/conclusion.tex) [3 <./files/Fulllayoutprediction.png> <./files/jpgunettr
+ain.png> <./files/deepmedictrain.png>] (report.bbl
 Underfull \hbox (badness 1527) in paragraph at lines 32--36
 []\OT1/ptm/m/n/8 ``Efficient multi-scale 3d con-vo-lu-tional neu-ral net-work
  []
@@ -404,7 +407,7 @@ Before submitting the final camera ready copy, remember to:
 
 [4
 
- <./files/predunet.png>] (report.aux)
+ <./files/preddeepmedic.png> <./files/predunet.png>] (report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -412,7 +415,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  2341 strings out of 492973
  40269 string characters out of 3126692
- 109731 words of memory out of 3000000
+ 108731 words of memory out of 3000000
  6178 multiletter control sequences out of 15000+200000
  36554 words of font info for 70 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -431,7 +434,7 @@ sy7.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times
 imes/utmbi8a.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
 urw/times/utmr8a.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on report.pdf (4 pages, 2125552 bytes).
+Output written on report.pdf (4 pages, 2126069 bytes).
 PDF statistics:
  74 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
