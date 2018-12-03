@@ -24,12 +24,12 @@ First part is called down or encoder part. Convolutional blocks followed by maxp
 In comparison to other fully convolutional segmentation networks, the main feature of U-Net  is that while upsampling and going deeper in the networks, it also concatenates the higher resolution features from the down sampling part with upsampled features in order to better localize and learn representation.\newline
 %As upsampling is sparse we need to be good prior from beginning stages to get the better localization representation. In order to get consistent size, we applied padded convolutions to keep dimensions across concatenation. Localization is one of the most important features in case of biomedical image processing. In order to localize, high resolution from the contracting path are combined with upsampled output. By this the successive convolution layer can then learn to assemble a more precise output. The main modification in our architecture was that in the upsampling part we have a large number of feature channels, which allows the network to propogate context information to high resolution layers. To predict the pixels in the border region of the image, the missing context is extrapolated by mirroring the input image.
 
-\subsection{Metrics}
+\subsection{Metrics}\label{metrics_chapter}
 
 \subsubsection{Dice Loss}
 We need  validation criteria to build our models. We use a Dice loss coefficient to compare the similarity of two samples. In the following equation, smmooth is added and stands for backpropagation. Ours is defined by: 
 \begin{equation}
-Diceloss = 1 - \frac{2*(Y_{true} \bigcap Y_{prediction} + 1)}{|Y_{true}| + |Y_{prediction}| + 1}
+dice loss = 1 - \frac{2*(Y_{true} \bigcap Y_{prediction} + 1)}{|Y_{true}| + |Y_{prediction}| + 1}
 \end{equation} 
 
 
@@ -45,7 +45,7 @@ BCE = - \frac{1}{n} \sum_{i=1}^{n}(y \log{(p_i)} + (1-y_i)\log{(1-p_i)})
 Then, our BCE Dice Loss is:
 
 \begin{equation}
-Loss =  Diceloss + BCE
+Loss =  dice loss + BCE
 \end{equation}
 
 \subsubsection{Hausdorff distance}
