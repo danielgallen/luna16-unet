@@ -4,7 +4,20 @@ Unet for segmenting Luna-16 dataset. Data analytics course.
 DeepMedic Results
 ---------------------
 No post-processing:
-DICE: [0.9615 0.9624 0.6811]
+DICE: []
+Hausdorff:
+Mean Distance:
+
+Unet Results:
+--------------------
+No post-processing:
+DICE: []
+Hausdorff:
+Mean Distance:
+
+Related Work:
+--------------------
+https://journals.scholarsportal.info/pdf/02780062/v24i0008/1025_tasotplic.xml
 
 Links:
 ---------------------
