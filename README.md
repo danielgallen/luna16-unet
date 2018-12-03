@@ -1,5 +1,10 @@
 # luna16-unet
 Unet for segmenting Luna-16 dataset. Data analytics course.
+Batch Size: 3
+Trained with 10 images
+Training with 90%
+Validation with 10%
+Tested with 20 images
 
 DeepMedic Results
 ---------------------
