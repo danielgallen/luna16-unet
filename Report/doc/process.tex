@@ -30,6 +30,4 @@ Therefore, a generator was defined to reduce the data size that will be fed to t
 
 \subsection{Prediction, displaying and calculating metrics}
 
-- prediction on 20 ct scans
-- Nifty images created for displaying
-- three metrics were calculated on test scans
+After training the two models the models were used to predict slices of the 20 test CT scans. The predicted labels were again merged to NIfTI files and displayed. For evaluation an average of the dice loss, the Hausdorff distance and the mean distance were calculated over all 20 test scans.
