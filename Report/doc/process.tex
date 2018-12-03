@@ -12,7 +12,7 @@ The used dataset is from the LUNA16 challenge and each scan contains a number of
 	\label{scan_picture}
 \end{figure}
 
-The dataset consists of about 10 GB of mdh and raw files. The files contain a varying number of slices of 512 x 512 pixel grey-scale images and corresponding 512 x 512 pixel label maps. Since computational resources were limited just a subset of the data was used for this work. Furthermore the more detailed label map was reduced to one label for the lungs and one label for the tube.
+The dataset consists of about 10 GB of mdh and raw files. The files contain a varying number of slices of 512 x 512 pixel grey-scale images and corresponding 512 x 512 pixel label maps. Since computational resources were limited just a subset of the data was used for this work. Furthermore the more detailed label map was reduced to one label for the lungs and one label for the bronchus.
 
 \subsection{Preprocessing of image data}
 Each file was converted to a NIfTI image file for better processing and visualization. These files contain all grey-scale image slices of one scan. For more appropriate input values each image was normalized ($\mu = 0.0$ and $\sigma = 1.0$) separately.
@@ -29,6 +29,3 @@ threshold, export files to nii.gz
 - ram issue
 - generator solution
 - still problems with data import size
-
-
-
