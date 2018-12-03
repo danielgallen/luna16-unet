@@ -18,6 +18,7 @@ Mean Distance:
 Related Work:
 --------------------
 https://journals.scholarsportal.info/pdf/02780062/v24i0008/1025_tasotplic.xml
+https://aapm.onlinelibrary.wiley.com/doi/epdf/10.1118/1.1312192
 
 Links:
 ---------------------
