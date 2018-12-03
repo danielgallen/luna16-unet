@@ -13,6 +13,7 @@ comparison of unet and deepmedic
 
 explain high hausdorff and how to reduce it
 
+
 \begin{table}[h!]
 	\centering
 	\setlength{\tabcolsep}{10pt}
@@ -27,31 +28,31 @@ explain high hausdorff and how to reduce it
 		\hline
 		\newline 
 	\end{tabular}
-	\caption{Errors of the LSTM network compared to the forecasting approaches of assignment 1.}
+	\caption{Dice Loss, Hausdorff distance and mean distance on 20 evaluation CT scans for the DeepMedic and the U-Net architecture.}
 	\label{table_result}
 \end{table}
+
+\begin{figure}[h!]
+	\includegraphics[width=0.49\textwidth, angle=0]{files/deepmedictrain.png}
+	\caption{Training process of the DeepMedic architecture. The loss function (BCE) on the training data is shown for the lungs (red) and for the bronchus (green)}
+	\label{train_deepmedic}
+\end{figure}
 
 
 \begin{figure}[h!]
 	\includegraphics[width=0.49\textwidth, angle=0]{files/jpgunettrain.png}
-	\caption{xxx}
-	\label{scan_picture}
-\end{figure}
-
-\begin{figure}[h!]
-	\includegraphics[width=0.49\textwidth, angle=0]{files/deepmedictrain.png}
-	\caption{xxx}
-	\label{scan_picture}
+	\caption{Training process of the U-Net architecture. The dice loss on the training and validation data is shown on the left. The actual loss function ($BCE + dice loss$) is shown on the right.}
+	\label{train_unet}
 \end{figure}
 
 \begin{figure}[h!]
 	\includegraphics[width=0.49\textwidth, angle=0]{files/preddeepmedic.png}
-	\caption{xxx}
-	\label{scan_picture}
+	\caption{Example prediction of the DeepMedic architecture on one CT scan. The original label map for training is displayed on the left while the prediction of the network is shown on the right.}
+	\label{pred_deepmedic}
 \end{figure}
 
 \begin{figure}[h!]
 	\includegraphics[width=0.49\textwidth, angle=0]{files/predunet.png}
-	\caption{xxx}
-	\label{scan_picture}
+	\caption{Example prediction of the DeepMedic architecture on one CT scan. The original label map for training is displayed on the left while the prediction of the network is shown on the right.}
+	\label{pred_unet}
 \end{figure}

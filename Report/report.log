@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.16)  3 DEC 2018 11:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  3 DEC 2018 12:00
 entering extended mode
 **./report.tex
 (report.tex
 LaTeX2e <2018-04-01> patch level 5
 
-("C:\Users\Rajaona\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ieeetran\IEEEtra
-n.cls"
+("C:\Users\steff\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ieeetran\IEEEtran.
+cls"
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -18,8 +18,7 @@ Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 \@IEEEtrantmptoksA=\toks14
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
 
-("C:\Users\Rajaona\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd
-"
+("C:\Users\steff\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 -- Using 8.5in x 11in (letter) paper.
@@ -114,48 +113,35 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \c@IEEEbiography=\count94
 \@IEEEtranrubishbin=\box27
 )
-("C:\Users\Rajaona\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphic
-x.sty"
+("C:\Users\steff\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.
+sty"
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\Rajaona\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.
-sty"
+("C:\Users\steff\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.st
+y"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-("C:\Users\Rajaona\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphic
-s.sty"
+("C:\Users\steff\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.
+sty"
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\Rajaona\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.st
-y"
+("C:\Users\steff\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Users\Rajaona\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\gra
-phics.cfg"
+("C:\Users\steff\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graph
+ics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-("C:\Users\Rajaona\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdf
-tex.def"
+("C:\Users\steff\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdfte
+x.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen126
 \Gin@req@width=\dimen127
 ) (report.aux
-
-LaTeX Warning: Label `scan_picture' multiply defined.
-
-
-LaTeX Warning: Label `scan_picture' multiply defined.
-
-
-LaTeX Warning: Label `scan_picture' multiply defined.
-
-
-LaTeX Warning: Label `scan_picture' multiply defined.
-
 
 LaTeX Warning: Label `scan_picture' multiply defined.
 
@@ -177,8 +163,8 @@ LaTeX Font Info:    ... okay on input line 8.
 
 -- Lines per column: 56 (exact).
 
-("C:\Users\Rajaona\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.
-mkii"
+("C:\Users\steff\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
+ii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count95
 \scratchdimen=\dimen128
@@ -192,40 +178,40 @@ mkii"
 \makeMPintoPDFobject=\count100
 \everyMPtoPDFconversion=\toks17
 )
-("C:\Users\Rajaona\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopd
-f-base.sty"
+("C:\Users\steff\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-
+base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-("C:\Users\Rajaona\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwa
-rerr.sty"
+("C:\Users\steff\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infware
+rr.sty"
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-("C:\Users\Rajaona\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.
-sty"
+("C:\Users\steff\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.st
+y"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-("C:\Users\Rajaona\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdef
-inekeys.sty"
+("C:\Users\steff\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdefin
+ekeys.sty"
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 
-("C:\Users\Rajaona\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcm
-ds.sty"
+("C:\Users\steff\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds
+.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )))
-("C:\Users\Rajaona\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptio
-ns.sty"
+("C:\Users\steff\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions
+.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-("C:\Users\Rajaona\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvset
-keys.sty"
+("C:\Users\steff\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvsetke
+ys.sty"
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-("C:\Users\Rajaona\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexc
-mds.sty"
+("C:\Users\steff\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexcmd
+s.sty"
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
-("C:\Users\Rajaona\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\iflua
-tex.sty"
+("C:\Users\steff\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluate
+x.sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -234,14 +220,14 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-("C:\Users\Rajaona\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdfte
-xcmds.sty"
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+("C:\Users\steff\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftexc
+mds.sty"
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-("C:\Users\Rajaona\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf
-.sty"
-Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+("C:\Users\steff\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.s
+ty"
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -273,52 +259,36 @@ Overfull \hbox (0.84283pt too wide) in paragraph at lines 8--9
 <files/deepmedic.png, id=2, 1018.80624pt x 326.21875pt>
 File: files/deepmedic.png Graphic file (type png)
 <use files/deepmedic.png>
-Package pdftex.def Info: files/deepmedic.png  used on input line 8.
+Package pdftex.def Info: files/deepmedic.png  used on input line 5.
 (pdftex.def)             Requested size: 252.84283pt x 80.95715pt.
 
-Overfull \hbox (0.84283pt too wide) in paragraph at lines 8--9
+Overfull \hbox (0.84283pt too wide) in paragraph at lines 5--6
 [][] 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 4205) in paragraph at lines 14--15
-[]\OT1/ptm/m/n/10 Semantic seg-men-ta-tion is par-ti-tion of an im-age in
- []
+[1{C:/Users/steff/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
-
- []
-
-<files/unetstructure.jpg, id=3, 704.6325pt x 481.8pt>
+ <./files/ctscans.jpg> <./files/deepmedic.png>]
+<files/unetstructure.jpg, id=11, 704.6325pt x 481.8pt>
 File: files/unetstructure.jpg Graphic file (type jpg)
 <use files/unetstructure.jpg>
-Package pdftex.def Info: files/unetstructure.jpg  used on input line 17.
+Package pdftex.def Info: files/unetstructure.jpg  used on input line 16.
 (pdftex.def)             Requested size: 252.84283pt x 172.88177pt.
 
-Overfull \hbox (0.84283pt too wide) in paragraph at lines 17--18
+Overfull \hbox (0.84283pt too wide) in paragraph at lines 16--17
 [][] 
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--26
+Underfull \hbox (badness 10000) in paragraph at lines 21--25
 
  []
 
-[1{C:/Users/Rajaona/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-
- <./files/ctscans.jpg>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 31.
+(Font)              <7> on input line 30.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 31.
+(Font)              <5> on input line 30.
 ) (doc/relatedwork.tex) (doc/process.tex
 <files/Fulllayoutprediction.png, id=12, 1385.175pt x 965.6075pt>
 File: files/Fulllayoutprediction.png Graphic file (type png)
@@ -334,33 +304,33 @@ Overfull \hbox (0.84283pt too wide) in paragraph at lines 10--11
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[2 <./files/deepmedic.png> <./files/unetstructure.jpg>]
+[2 <./files/unetstructure.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 23--26
 
  []
 
 ) (doc/evaluation.tex
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 20.
+(Font)              <8> on input line 21.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 20.
-<files/jpgunettrain.png, id=24, 939.51pt x 498.663pt>
-File: files/jpgunettrain.png Graphic file (type png)
-<use files/jpgunettrain.png>
-Package pdftex.def Info: files/jpgunettrain.png  used on input line 36.
-(pdftex.def)             Requested size: 252.84283pt x 134.19948pt.
+(Font)              <6> on input line 21.
+<files/deepmedictrain.png, id=24, 430.10687pt x 219.31938pt>
+File: files/deepmedictrain.png Graphic file (type png)
+<use files/deepmedictrain.png>
+Package pdftex.def Info: files/deepmedictrain.png  used on input line 36.
+(pdftex.def)             Requested size: 252.84283pt x 128.93213pt.
 
 Overfull \hbox (0.84283pt too wide) in paragraph at lines 36--37
 [][] 
  []
 
-<files/deepmedictrain.png, id=25, 526.96875pt x 222.33063pt>
-File: files/deepmedictrain.png Graphic file (type png)
-<use files/deepmedictrain.png>
-Package pdftex.def Info: files/deepmedictrain.png  used on input line 42.
-(pdftex.def)             Requested size: 252.84283pt x 106.67676pt.
+<files/jpgunettrain.png, id=25, 939.51pt x 498.663pt>
+File: files/jpgunettrain.png Graphic file (type png)
+<use files/jpgunettrain.png>
+Package pdftex.def Info: files/jpgunettrain.png  used on input line 43.
+(pdftex.def)             Requested size: 252.84283pt x 134.19948pt.
 
-Overfull \hbox (0.84283pt too wide) in paragraph at lines 42--43
+Overfull \hbox (0.84283pt too wide) in paragraph at lines 43--44
 [][] 
  []
 
@@ -370,10 +340,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <files/preddeepmedic.png, id=26, 626.84187pt x 199.24437pt>
 File: files/preddeepmedic.png Graphic file (type png)
 <use files/preddeepmedic.png>
-Package pdftex.def Info: files/preddeepmedic.png  used on input line 48.
+Package pdftex.def Info: files/preddeepmedic.png  used on input line 49.
 (pdftex.def)             Requested size: 252.84283pt x 80.36823pt.
 
-Overfull \hbox (0.84283pt too wide) in paragraph at lines 48--49
+Overfull \hbox (0.84283pt too wide) in paragraph at lines 49--50
 [][] 
  []
 
@@ -383,17 +353,18 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <files/predunet.png, id=27, 629.35126pt x 196.23312pt>
 File: files/predunet.png Graphic file (type png)
 <use files/predunet.png>
-Package pdftex.def Info: files/predunet.png  used on input line 54.
+Package pdftex.def Info: files/predunet.png  used on input line 55.
 (pdftex.def)             Requested size: 252.84283pt x 78.83618pt.
 
-Overfull \hbox (0.84283pt too wide) in paragraph at lines 54--55
+Overfull \hbox (0.84283pt too wide) in paragraph at lines 55--56
 [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (doc/conclusion.tex) (report.bbl
+) (doc/conclusion.tex) (report.bbl [3 <./files/Fulllayoutprediction.png> <./fil
+es/deepmedictrain.png>]
 Underfull \hbox (badness 1527) in paragraph at lines 32--36
 []\OT1/ptm/m/n/8 ``Efficient multi-scale 3d con-vo-lu-tional neu-ral net-work
  []
@@ -403,7 +374,7 @@ Underfull \hbox (badness 2435) in paragraph at lines 32--36
 \OT1/ptm/m/n/8 for brain le-sion seg-men-ta-tion.'' [On-line]. Avail-able:
  []
 
-[3 <./files/Fulllayoutprediction.png> <./files/jpgunettrain.png>])
+)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -417,37 +388,39 @@ Before submitting the final camera ready copy, remember to:
 
 [4
 
- <./files/deepmedictrain.png> <./files/preddeepmedic.png> <./files/predunet.png
->] (report.aux)
+ <./files/jpgunettrain.png> <./files/preddeepmedic.png> <./files/predunet.png>]
+ (report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2341 strings out of 492970
- 40669 string characters out of 3125705
- 110865 words of memory out of 3000000
- 6180 multiletter control sequences out of 15000+200000
+ 2345 strings out of 492973
+ 40325 string characters out of 3126692
+ 108763 words of memory out of 3000000
+ 6182 multiletter control sequences out of 15000+200000
  36554 words of font info for 70 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 41i,7n,25p,874b,234s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Rajaona/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.e
-nc}<C:/Users/Rajaona/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmex10.pfb><C:/Users/Rajaona/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Rajaona/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Rajaona/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Rajaona/
+ 41i,8n,25p,874b,234s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
+}<C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmex10.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/steff/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/steff/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/steff/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/U
-sers/Rajaona/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><C:/Users/Rajaona/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmsy7.pfb><C:/Users/Rajaona/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/urw/times/utmb8a.pfb><C:/Users/Rajaona/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Rajaona/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Rajaona/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (4 pages, 2126225 bytes).
+sers/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+8.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmsy7.pfb><C:/Users/steff/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/steff/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/steff/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/steff/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on report.pdf (4 pages, 2139944 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
+ 82 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
