@@ -8,6 +8,9 @@ DICE: []
 Hausdorff:
 Mean Distance:
 
+DeepMedic Source Code:
+https://github.com/Kamnitsask/deepmedic
+
 Unet Results:
 --------------------
 No post-processing:
