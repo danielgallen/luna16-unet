@@ -20,6 +20,22 @@ Each file was converted to a NIfTI image file for better processing and visualiz
 
 \subsection{Training and validation}
 
+UNET
+35 epochs
+batch size 3 slices
+adam optimizer
+bce + dice loss as loss function
+
+DEEPMEDIC
+35 epochs
+batch size 10 samples
+learning rate 0.001 at beginning
+rms propagation as optimizer and nesterov momentum with value of 0.06
+l2 regularization (0.0001)
+dice since it is in open source config like this
+
+
+
 building of networks
 describe it (dice loss and bce dice loss)
 hold out evaluation
