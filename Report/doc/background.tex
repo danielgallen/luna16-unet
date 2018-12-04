@@ -1,14 +1,14 @@
 % !TEX root = ../Report.tex
 \subsection{DeepMedic architecture}\label{deepmedic_chapter}
-DeepMedic is a 3D neural network. It has been initially used for segmentations in biomedical 3D scans, especially for detecting brain anomalies such as injuries, tumors and lesions. In this project we will try this algorithm for lung segmentations. \newline
+DeepMedic is a 3D neural network. It has been initially used for segmentations in biomedical 3D scans, especially for detecting brain anomalies such as injuries, tumors and lesions. In this project this algorithm will be tried for lung segmentations. \newline
 \begin{figure}[h!]
 	\includegraphics[width=0.49\textwidth, angle=0]{files/deepmedic.png}
 	\caption{Structure of DeepMedic architecture}
 	\label{deepmedic}
 \end{figure}
  
-A DeepMedic model consists of detecting a particular pattern in an image. This is achieved by multi-layer convolution in the network. We distinguish two components in the model. First there is a three-dimension convolutional neural network (CNN) model used for dense segmentation (figure \ref{deepmedic} left part), then  a three-dimension fully connected conditional random field (CRF) model which does post-processing and handles the hard segmentation as well (figure \ref{deepmedic} right part). We can also notice a double-path network composed of a regular-resolution and a lower-resolution path. This second one mainly prevents from overfitting.
-Each layer of the CNN model contains channels called feature maps, i.e. a group of neurons identifying a feature in the previous layer. Then featurer are defined by associated kernel weights. Number of inputs, outputs, feature-maps and kernels are tunable.
+A DeepMedic model consists of detecting a particular pattern in an image. This is achieved by multi-layer convolution in the network. We distinguish two components in the model. First there is a three-dimension convolutional neural network (CNN) model used for dense segmentation (figure \ref{deepmedic} left part), then  a three-dimension fully connected conditional random field (CRF) model which does post-processing and handles the hard segmentation as well (right part in figure \ref{deepmedic}). We can also notice a double-path network composed of a regular-resolution and a lower-resolution path. This second one mainly prevents from overfitting.
+Each layer of the CNN model contains channels called feature maps, i.e. a group of neurons identifying a feature in the previous layer. Then features are defined by associated kernel weights. Number of inputs, outputs, feature-maps and kernels are tunable.
 
 \subsection{U-Net architecture}
 Semantic segmentation is partition of an image in coherent parts. U-Net is mostly used for biomedical image segmentation. In figure \ref{unetstructure} the structure of the U-Net is shown.\newline
@@ -26,12 +26,11 @@ In comparison to other fully convolutional segmentation networks, the main featu
 \subsection{Metrics}\label{metrics_chapter}
 
 \subsubsection{Dice Loss}
-We need  validation criteria to build our models. We use a Dice loss coefficient to compare the similarity of two samples. In the following equation, smooth is added and stands for backpropagation. Ours is defined by: 
+We need a validation criteria to build our models. We use the dice loss coefficient to compare the two samples. In the following equation, smooth is added and stands for backpropagation. Ours is defined by: 
+
 \begin{equation}
 dice loss = 1 - \frac{2*(Y_{true} \bigcap Y_{prediction}) + 1}{|Y_{true}| + |Y_{prediction}| + 1}
 \end{equation} 
-
-
 
 \subsubsection{BCE Dice Loss}
 We also use binary cross-entropy (BCE) to measure the performance of our classification model. For labels y and predcted probabilities p, binary cros-entropy is:
@@ -49,13 +48,13 @@ Loss =  dice loss + BCE
 
 \subsubsection{Hausdorff distance}
 The Hausdorff distance is a metric to calculate the maximum of the difference between two sets of coordinates.\newline
-For the set of coordinates $A$ and $B$ it is defined as following
+For the set of coordinates $A$ and $B$ it is defined as
 
 \begin{equation}
 	d_{hausdorff} (A,B) = \max_{a \in A} (\min_{b \in B} d(a,b))
 \end{equation} 
 
-where $d(a,b)$ represents the Euclid distance between the two coordinates $a$ and $b$. It can be interpreted as the maximum distance of set $B$ to set $A$ and is therefore a important metric for evaluating the difference between two label maps.
+where $d(a,b)$ represents the Euclidean distance between the two coordinates $a$ and $b$. It can be interpreted as the maximum distance of set $B$ to set $A$ and is therefore a important metric for evaluating the difference between two label maps.
 
 \subsubsection{Mean distance}
 The mean distance is similar to the Hausdorff metric but is a measurement for the mean of the difference between two sets of coordinates.\newline
@@ -65,4 +64,4 @@ It is therefore defined as following
 	d_{mean} (A,B) = \frac{1}{|A|} \sum_{a \in A} \min_{b \in B} d(a,b)
 \end{equation}
 
-where again $d(a,b)$ represents the Euclid distance between the two coordinates $a$ and $b$. It furthermore can be seen as the average difference between the two sets and will also be used for evaluation.
+where again $d(a,b)$ represents the Euclidean distance between the two coordinates $a$ and $b$. It furthermore can be seen as the average difference between the two sets and will also be used for evaluation.
