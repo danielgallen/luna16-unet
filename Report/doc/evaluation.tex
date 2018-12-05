@@ -2,10 +2,10 @@
 
 \subsection{Setup}
 
-The project was created in Python 3.6, NiBabel was used to convert and import the CT scans and the two architectures were built and trained on Tensorflow's high-level API Keras. Furthermore the tool Slicer was used to display the CT scans and to create the 3D model of the lung and bronchus.
+The project was created in Python 3, the NiBabel python library was used to convert and import the CT scans and the two architectures were built and trained on Tensorflow and Keras with Tensorflow backend. The tool 3DSlicer was used to display the CT scans and labelmaps and to create the 3D model of the lung and bronchus.
 
 \subsection{Training processes}
-The training of both networks was done on a Nvidia GTX1080Ti GPU and consumed a large amount of computational resources and RAM storage. Especially the big demand for RAM can be attributed to the fact that we imported the whole dataset at once instead of importing and feeding it to the training process in real time with the above described generator. The training for both networks on the 10 CT scans over 35 epochs took several hours.\newline 
+The training of both networks was done on a workstation with 64GB of DDR4 RAM and a Nvidia GTX1080Ti GPU. The training process consumed a large amount of computational power and RAM/VRAM storage. The large demand for RAM can be attributed to the fact that we imported the whole dataset at once instead of importing and feeding it to the training process in real time with the above described generator. The training for both networks on the 10 CT scans over 35 epochs took several hours.\newline 
 The loss function during training of the DeepMedic architecture is shown in figure \ref{train_deepmedic}. The BCE loss for the lungs converges very fast to an asymptote close to 0. The loss for the bronchus is less stable and decreases slower. It furthermore remains higher than the loss for the lungs even in the end because the structure of the bronchus is more complicated and the network has problems finding a representation for its variating and spindly structure.\newline
 \begin{figure}[h!]
 	\includegraphics[width=0.49\textwidth, angle=0]{files/deepmedictrain.png}
