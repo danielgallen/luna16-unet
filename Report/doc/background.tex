@@ -1,20 +1,20 @@
 % !TEX root = ../Report.tex
 \subsection{DeepMedic architecture}\label{deepmedic_chapter}
-DeepMedic is a 3D deep convolutional neural network architecture. It was initially designed and used for segmentations of brain lesions from 3D magnetic resonance imaging (MRI) scans. In this project this algorithm was adapted to be applied for lung and bronchus segmentations from clinical CT scans. \newline
+DeepMedic is a 3D deep convolutional neural network architecture. It was initially designed and used for segmentations of brain lesions from 3D magnetic resonance imaging (MRI) scans by Kamnitsas et. al. \cite{deepmedic}. In this project this algorithm was adapted to be applied for lung and bronchus segmentations from clinical CT scans. \newline
 \begin{figure}[h!]
 	\includegraphics[width=0.49\textwidth, angle=0]{files/deepMedic.png}
-	\caption{Structure of DeepMedic architecture}
+	\caption{Structure of DeepMedic architecture on the example of brain lesion segmentation \cite{deepmedic}}
 	\label{deepmedic}
 \end{figure}
  
-A trained DeepMedic model works by detecting particular patterns and features in images. This is achieved by multi-layer convolution in the network. There are two major components in the model architecture. First there is a two path three-dimension deep convolutional neural network model used for dense segmentation (figure \ref{deepmedic} left part), followed by a three-dimension fully connected conditional random field (CRF) model which performs post-processing and handles the final hard segmentation (right part in figure \ref{deepmedic}). The double-path portion of the CNN is composed of a regular-resolution and a low-resolution path. While the regular-resolution path acts comparably to other CNN in detecting features of the images, the low-resolution pathway works to recognize lower detail features of the images which improves generalization of the final model and helps mitigate overfitting.
+A trained DeepMedic model works by detecting particular patterns and features in images. This is achieved by multi-layer convolution in the network. There are two major components in the model architecture. First there is a two path three-dimension deep convolutional neural network model used for dense segmentation (left part in figure \ref{deepmedic}), followed by a three-dimension fully connected conditional random field (CRF) model which performs post-processing and handles the final hard segmentation (right part in figure \ref{deepmedic}). The double-path portion of the CNN is composed of a regular-resolution and a low-resolution path. While the regular-resolution path acts comparably to other CNN in detecting features of the images, the low-resolution pathway works to recognize lower detail features of the images which improves generalization of the final model and helps mitigate overfitting.
 Each layer of the CNN model contains channels called feature maps, i.e. a group of neurons identifying a feature in the previous layer. Then features are defined by associated kernel weights. Number of inputs, outputs, feature-maps and kernels are tunable.
 
 \subsection{U-Net architecture}
-The U-Net architecture is another CNN used for image segmentation. In figure \ref{unetstructure} the structure of the U-Net is shown.\newline
+The U-Net architecture is another CNN used for biomedical image segmentation and was introduced by Ronneberger, Fischer and Brox \cite{unet}. The overall structure of the U-Net is shown in figure \ref{unetstructure}.\newline
 \begin{figure}[h!]
 	\includegraphics[width=0.49\textwidth, angle=0]{files/unetstructure.jpg}
-	\caption{Structure of U-Net architecture}
+	\caption{Structure of U-Net architecture \cite{unet}}
 	\label{unetstructure}
 \end{figure}
 
@@ -25,24 +25,28 @@ In comparison to other fully convolutional segmentation networks, the main featu
 
 \subsection{Metrics}\label{metrics_chapter}
 
+The models were trained by minimizing a loss function. The chosen loss function was a combination of the Dice loss coefficient and binary cross entropy. 
+
 \subsubsection{Dice Loss}
-The models were trained by minimizing a loss function. The chosen loss function was a combination of the Dice loss coefficient and binary cross entropy. In the following equation, smoothing is added and stands for backpropagation. The Dice loss function is defined by:
+The Dice loss function is defined by:
 
 \begin{equation}
 dice loss = 1 - \frac{2*(Y_{true} \bigcap Y_{prediction}) + 1}{|Y_{true}| + |Y_{prediction}| + 1}
 \end{equation} 
 
+It is a metric for the overlapping of two sets.
+
 \subsubsection{BCE Dice Loss}
-The other portion of the loss function used for training was binary cross-entropy (BCE) to measure the performance of the classification model. For labels y and predicted probabilities p, binary cros-entropy is:
+The other portion of the loss function used for training was binary cross-entropy (BCE) to measure the performance of the classification model. For labels y and predicted probabilities p, binary cross-entropy is defined by:
 
 \begin{equation}
 BCE = - \frac{1}{n} \sum_{i=1}^{n}(y_i \log{(p_i)} + (1-y_i)\log{(1-p_i)})
 \end{equation} 
 
-Therefore, the BCE Dice Loss is:
+Therefore, the used loss function is defined by:
 
 \begin{equation}
-Loss =  dice loss + BCE
+loss =  dice loss + BCE
 \end{equation}
 
 \subsubsection{Hausdorff distance}
