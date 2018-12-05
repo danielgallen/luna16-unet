@@ -1,13 +1,13 @@
 % !TEX root = ../Report.tex
 \subsection{DeepMedic architecture}\label{deepmedic_chapter}
-DeepMedic is a 3D neural network. It has been initially used for segmentations in biomedical 3D scans, especially for detecting brain anomalies such as injuries, tumors and lesions. In this project this algorithm will be tried for lung segmentations. \newline
+DeepMedic is a 3D deep convolutional neural network architecture. It was initially designed and used for segmentations of brain lesions from 3D magnetic resonance imaging (MRI) scans. In this project this algorithm was adapted to be applied for lung and bronchus segmentations. \newline
 \begin{figure}[h!]
-	\includegraphics[width=0.49\textwidth, angle=0]{files/deepmedic.png}
+	\includegraphics[width=0.49\textwidth, angle=0]{files/deepMedic.png}
 	\caption{Structure of DeepMedic architecture}
 	\label{deepmedic}
 \end{figure}
  
-A DeepMedic model consists of detecting a particular pattern in an image. This is achieved by multi-layer convolution in the network. We distinguish two components in the model. First there is a three-dimension convolutional neural network (CNN) model used for dense segmentation (figure \ref{deepmedic} left part), then  a three-dimension fully connected conditional random field (CRF) model which does post-processing and handles the hard segmentation as well (right part in figure \ref{deepmedic}). We can also notice a double-path network composed of a regular-resolution and a lower-resolution path. This second one mainly prevents from overfitting.
+A trained DeepMedic model works by detecting particular patterns and features in images. This is achieved by multi-layer convolution in the network. There are two major components in the model architecture. First there is a two path three-dimension deep convolutional neural network model used for dense segmentation (figure \ref{deepmedic} left part), followed by a three-dimension fully connected conditional random field (CRF) model which performs post-processing and handles the final hard segmentation (right part in figure \ref{deepmedic}). The double-path portion of the CNN is composed of a regular-resolution and a lower-resolution path. The lower-resolution pathway works to recognize lower detail features of the images which improves generalization of the final model and helps mitigate overfitting.
 Each layer of the CNN model contains channels called feature maps, i.e. a group of neurons identifying a feature in the previous layer. Then features are defined by associated kernel weights. Number of inputs, outputs, feature-maps and kernels are tunable.
 
 \subsection{U-Net architecture}
