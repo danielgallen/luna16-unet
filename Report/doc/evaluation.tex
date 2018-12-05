@@ -37,13 +37,12 @@ For the Deepmedic architecture (shown on figure \ref{pred_deepmedic} above), dif
 	\label{pred_unet}
 \end{figure}
 
-Figure \ref{pred_unet} displays an example of the original structure and the predicted scan of the U-Net architecture. The segmentation of the bronchus is not as accurate or consistent as it is for Deepmedic. The main reasons for that is that bronchus are more complex, smaller and variable structures. However, the predictions give an appropriate version of the lungs, even slightly better than Deepmedic's ones.\newline\newline
+Figure \ref{pred_unet} displays an example of the original structure and the predicted scan of the U-Net architecture. The segmentation of the bronchus is not as accurate or consistent as it is for Deepmedic. The main reasons for that is that bronchus are more complex, smaller and variable structures. However, the predictions give an appropriate version of the lungs, even slightly better than Deepmedic's ones.\newline
 
-Last part focuses on quantitative analysis over chosen metrics.
+\subsection{Quantitative analysis}
 
-comparison of unet and deepmedic
-
-The relatively high Hausdorff can be explained by the metric's high sensitivity to noise in images. As the predicted labelmaps had not been post-processed using methods such as island removal prior to metric calculations any small noise in the predicted labelmap will produce a large Hausdorff distance value. The low mean distance values show that this higher Hausdorff distance is not an issue as the overall bulk of the segmentation is not far from the true segmentation of the lungs.
+Table \ref{table_result} summarizes the test set averages for Dice coefficient, Hausdorff distance and mean distance for the lungs for each architecture. The Dice coefficient is close to 0.97 for both models. This implies very high performances for both DeepMedic and U-net, with a tiny advantage on the lungs with the U-net. The mean distance metric also favors the U-net with a mean distance of 0.33mm compared to 1.45mm for DeepMedic.
+The relatively high Hausdorff distances of 103mm for the U-net and 119mm for DeepMedic can be explained by the metric's high sensitivity to noise in images. As the predicted labelmaps had not been post-processed using methods such as island removal prior to metric calculations any small noise in the predicted labelmap will produce a large Hausdorff distance value. The low mean distance values show that this higher Hausdorff distance is not an issue as the overall bulk of the segmentation is not far from the true segmentation of the lungs.
 
 \begin{table}[h!]
 	\caption{Dice Loss, Hausdorff distance and mean distance (on lungs and bronchus) averaged over 20 evaluation CT scans for the DeepMedic and the U-Net architecture.}
