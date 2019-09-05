@@ -6,6 +6,9 @@ Training with 90%
 Validation with 10%
 Tested with 20 images
 
+Change to using softmax with 3 output
+Use (#labels, x, y, z, 1, 1?)
+
 DeepMedic Results
 ---------------------
 No post-processing:
